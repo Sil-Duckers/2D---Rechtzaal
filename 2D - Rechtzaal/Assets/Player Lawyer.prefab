@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4871129117986201745
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4871129117986201744}
+  - component: {fileID: 1629848286231361294}
+  m_Layer: 0
+  m_Name: Player Lawyer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4871129117986201744
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4871129117986201745}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.5045, y: 2.5045, z: 2.5045}
+  m_Children:
+  - {fileID: 2649515844161433267}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1629848286231361294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4871129117986201745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e1c3bcc974c35147be53da0b1b0901b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitName: Mr Player
+  unitLevel: 10
+  score: 2
+  maxScore: 10
+  timePoints: 8
+--- !u!1001 &2651086232412853059
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4871129117986201744}
+    m_Modifications:
+    - target: {fileID: 1842994447228924, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_Name
+      value: Chara_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+--- !u!4 &2649515844161433267 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4068736368082416, guid: 0905f6ea03ce46e47a7dec7dac23d012, type: 3}
+  m_PrefabInstance: {fileID: 2651086232412853059}
+  m_PrefabAsset: {fileID: 0}
