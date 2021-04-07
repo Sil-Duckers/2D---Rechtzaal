@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e1c3bcc974c35147be53da0b1b0901b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitName: 'The Wizard '
+  unitName: The Wizard
   unitLevel: 30
   score: 3
   maxScore: 10
