@@ -46,9 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unitName: Mr Player
   unitLevel: 10
-  score: 2
-  maxScore: 10
-  timePoints: 8
+  score: 50
+  maxScore: 100
+  damage1: 30
+  damage2: 10
+  damage31: 0
+  damage32: 100
 --- !u!1001 &2651086232412853059
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -48,7 +48,10 @@ MonoBehaviour:
   unitLevel: 30
   score: 3
   maxScore: 10
-  timePoints: 8
+  damage1: -45
+  damage2: 0
+  damage31: 0
+  damage32: 0
 --- !u!1001 &7327600672424426086
 PrefabInstance:
   m_ObjectHideFlags: 0
