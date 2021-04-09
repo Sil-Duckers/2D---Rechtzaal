@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Mr Player
-  unitLevel: 10
+  unitLevel: 100
   score: 50
   maxScore: 100
   damage1: 30
