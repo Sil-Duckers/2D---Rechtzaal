@@ -7,6 +7,7 @@ public class Unit : MonoBehaviour
 
     public string unitName;
     public int unitLevel;
+    public int timePoints;
     
     public int score;
     public int maxScore;
@@ -22,11 +23,22 @@ public class Unit : MonoBehaviour
         if (score <= 0)
             return 1;
         else if (score >= 100)
+        {
             return 2;
-        else
+        }else
             return 0; 
         
+       /* if (timePoints <= 0)
+        {
+            return 3;
+        }
+        */
     }
-    
+
+   /* void MinusTime (int tmp)
+    {
+        timePoints -= tmp;
+    }
+    */
 
 }

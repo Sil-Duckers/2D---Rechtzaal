@@ -51,7 +51,7 @@ MonoBehaviour:
   damage1: 30
   damage2: 10
   damage31: 0
-  damage32: 100
+  damage32: 80
 --- !u!1001 &2651086232412853059
 PrefabInstance:
   m_ObjectHideFlags: 0

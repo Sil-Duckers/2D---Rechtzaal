@@ -49,7 +49,7 @@ MonoBehaviour:
   score: 3
   maxScore: 10
   damage1: -45
-  damage2: 0
+  damage2: -20
   damage31: 0
   damage32: 0
 --- !u!1001 &7327600672424426086

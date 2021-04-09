@@ -45,7 +45,7 @@ public class BattleSystem : MonoBehaviour
 
         battleScore.SetSlider(playerUnit); // Dit is voor de void uit te oefenen
 
-        yield return new WaitForSeconds(5f); //coroutine, 2 seconde delay 
+        yield return new WaitForSeconds(5f); //coroutine, 5 seconde delay 
 
         state = BattleState.PLAYERTURN; // verander state naar volgende
         PlayerTurn(); // functie PlayerTurn uitoefenen
@@ -62,7 +62,6 @@ public class BattleSystem : MonoBehaviour
         dialogueText.text = "The Getuige oproepen is super effective";
 
         yield return new WaitForSeconds(3f);
-
         if (isDead == 2)
         {
             state = BattleState.WON;
@@ -146,25 +145,55 @@ public class BattleSystem : MonoBehaviour
     }
     IEnumerator EnemyTurn()
     {
-        dialogueText.text = enemyUnit.unitName + " attacks!"; // Aangeven van aanval
-        yield return new WaitForSeconds(5f);
-
-        dialogueText.text = enemyUnit.unitName + " chooses DNA Onderzoek";
-        yield return new WaitForSeconds(2f);
-
-        dialogueText.text =  "DNA Onderzoek is tering effective";
-        int isDead = playerUnit.TakeDamage(enemyUnit.damage1); // damage de player
-        battleScore.SetScore(playerUnit.score); //playerHUD.SetHP, slider verzetten
-        yield return new WaitForSeconds(3f);
-
-        if (isDead == 1)  // check if dead or not and change state
+        if (A3 != 1)
         {
-            state = BattleState.LOST;
-            EndBattle();
-        } else
+            dialogueText.text = enemyUnit.unitName + " attacks!"; // Aangeven van aanval
+            yield return new WaitForSeconds(5f);
+
+            dialogueText.text = enemyUnit.unitName + " chooses DNA Onderzoek";
+            yield return new WaitForSeconds(2f);
+
+            dialogueText.text = "DNA Onderzoek is tering effective";
+            int isDead = playerUnit.TakeDamage(enemyUnit.damage1); // damage de player
+            battleScore.SetScore(playerUnit.score); //playerHUD.SetHP, slider verzetten
+            yield return new WaitForSeconds(3f);
+
+            if (isDead == 1)  // check if dead or not and change state
+            {
+                state = BattleState.LOST;
+                EndBattle();
+            }
+            else
+            {
+                state = BattleState.PLAYERTURN;
+                PlayerTurn();
+            }
+        }
+        if (A3 == 1)
         {
-            state = BattleState.PLAYERTURN;
-            PlayerTurn();
+            dialogueText.text = enemyUnit.unitName + " attacks!"; // Aangeven van aanval
+            yield return new WaitForSeconds(5f);
+
+            dialogueText.text = enemyUnit.unitName + " says It was you";
+            yield return new WaitForSeconds(2f);
+
+            dialogueText.text = "it was you is super effective";
+            int isDead = playerUnit.TakeDamage(enemyUnit.damage2); // damage de player
+            battleScore.SetScore(playerUnit.score); //playerHUD.SetHP, slider verzetten
+            yield return new WaitForSeconds(3f);
+            A3 = 0;
+
+            if (isDead == 1)  // check if dead or not and change state
+            {
+                state = BattleState.LOST;
+                EndBattle();
+            }
+            else
+            {
+                state = BattleState.PLAYERTURN;
+                PlayerTurn();
+            }
+            
         }
 
     }
@@ -189,14 +218,15 @@ public class BattleSystem : MonoBehaviour
     {
         if (state != BattleState.PLAYERTURN) // Checkt of speler aan de beurt is
             return;
-
-       StartCoroutine(PlayerAttack1()); // pause during attack
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerAttack1()); // pause during attack
     }
 
     public void OnAttackButton2() // new function to trigger action when attack is pressed.
     {
         if (state != BattleState.PLAYERTURN) // Checkt of speler aan de beurt is
             return;
+        //playerUnit.MinusTime(1);
         StartCoroutine(PlayerAttack2()); // pause during attack
     }
 
@@ -204,6 +234,7 @@ public class BattleSystem : MonoBehaviour
     {
         if (state != BattleState.PLAYERTURN) // Checkt of speler aan de beurt is
             return;
+        //playerUnit.MinusTime(1);
         StartCoroutine(PlayerAttack3()); // pause during attack
     }
 }
