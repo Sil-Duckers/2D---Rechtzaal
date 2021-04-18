@@ -16,6 +16,18 @@ public class Unit : MonoBehaviour
     public int damage31;
     public int damage32;
 
+    public int OP1A;
+    public int OP1B;
+    public int OP1C;
+
+    public int OP2A;
+    public int OP2B;
+    public int OP2C;
+
+    public int OP3A;
+    public int OP3B;
+    public int OP3C;
+
     public int TakeDamage(int dmg) // deze neemt dus player damage in als dmg)
     {
         score += dmg;

@@ -135,3 +135,12 @@ MonoBehaviour:
   damage2: 10
   damage31: 0
   damage32: 80
+  OP1A: 10
+  OP1B: 5
+  OP1C: 0
+  OP2A: 5
+  OP2B: 0
+  OP2C: 10
+  OP3A: 10
+  OP3B: 0
+  OP3C: 5
