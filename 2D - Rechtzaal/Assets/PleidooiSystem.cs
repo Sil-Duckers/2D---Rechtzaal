@@ -25,6 +25,7 @@ public class PleidooiSystem : MonoBehaviour
 
 
     public BattleSlider battleScore; // hiermee call ik het script Battlelsider in, noem het battlescore, kan evt vaker doen onder andere naam
+    public GetuigenMenu Getuigen;
 
     public BattleState state;
 
@@ -36,7 +37,7 @@ public class PleidooiSystem : MonoBehaviour
 
         state = BattleState.START; // verander gamestate naar begin
         StartCoroutine(SetupBattle()); // functie Playerturn uitoefenen, Startcoroutine voor delay
-
+        
     }
       
     IEnumerator SetupBattle() // IEnumerator is voor de delay, coroutine
@@ -72,7 +73,7 @@ public class PleidooiSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
 
         state = BattleState.PLAYERTURN; // verander state naar volgende
-        PlayerTurn(); // functie PlayerTurn uitoefenen
+        StartCoroutine(PlayerTurn()); // functie PlayerTurn uitoefenen
     }
 
     IEnumerator PlayerAttack1()
@@ -84,12 +85,12 @@ public class PleidooiSystem : MonoBehaviour
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP1A); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
-            PT += 1;
-            yield return new WaitForSeconds(3f);
+                        yield return new WaitForSeconds(3f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
             Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
             Button3.text = "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
+            PT += 1;
         } else if (PT == 1)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
@@ -97,12 +98,13 @@ public class PleidooiSystem : MonoBehaviour
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP2A); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
-            PT += 1;
+            
             yield return new WaitForSeconds(3f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
             Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
+            PT += 1;
         } else if (PT == 2)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
@@ -110,12 +112,13 @@ public class PleidooiSystem : MonoBehaviour
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP3A); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
-            PT += 1;
+            
             yield return new WaitForSeconds(3f);
             dialogueText.text = "Dit was het starpleidooi.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
+            PT += 1;
         }
         else
        /* if (isDead == 2)
@@ -141,12 +144,13 @@ public class PleidooiSystem : MonoBehaviour
             int isDead = playerUnit.TakeDamage(playerUnit.OP1B); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
-            PT += 1;
+            
             yield return new WaitForSeconds(3f);
-            dialogueText.text = "Dit was het starpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
             Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
             Button3.text = "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
+            PT += 1;
         }
         else if (PT == 1)
         {
@@ -156,12 +160,13 @@ public class PleidooiSystem : MonoBehaviour
             int isDead = playerUnit.TakeDamage(playerUnit.OP2B); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
-            PT += 1;
+            
             yield return new WaitForSeconds(3f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
             Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
+            PT += 1;
         }
         else if (PT == 2)
         {
@@ -171,12 +176,13 @@ public class PleidooiSystem : MonoBehaviour
             int isDead = playerUnit.TakeDamage(playerUnit.OP3B); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
-            PT += 1;
+            
             yield return new WaitForSeconds(3f);
             dialogueText.text = "Dit was het starpleidooi.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
+            PT += 1;
         }
         /* if (isDead == 2)
         {
@@ -200,12 +206,13 @@ public class PleidooiSystem : MonoBehaviour
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP1C); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
-            PT += 1;
+           
             yield return new WaitForSeconds(3f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
             Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
             Button3.text = "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
+            PT += 1;
         }
         else if (PT == 1)
         {
@@ -215,12 +222,13 @@ public class PleidooiSystem : MonoBehaviour
             int isDead = playerUnit.TakeDamage(playerUnit.OP2C); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
-            PT += 1;
+            
             yield return new WaitForSeconds(3f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
             Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
+            PT += 1;
         }
         else if (PT == 2)
         {
@@ -229,12 +237,13 @@ public class PleidooiSystem : MonoBehaviour
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP3C); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
-            PT += 1;
+            
             yield return new WaitForSeconds(3f);
             dialogueText.text = "Dit was het starpleidooi.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
+            PT += 1;
         }
         
         /* if (isDead == 2)
@@ -272,17 +281,9 @@ public class PleidooiSystem : MonoBehaviour
             yield return new WaitForSeconds(3f);
             PT = 4;
 
-            if (isDead == 1)  // check if dead or not and change state
-            {
-                state = BattleState.LOST;
-                EndBattle();
-            }
-            else
-            {
                 state = BattleState.PLAYERTURN;
-                PlayerTurn();
-            }
-        }
+                StartCoroutine(PlayerTurn());
+         }
         
             
         
@@ -300,21 +301,24 @@ public class PleidooiSystem : MonoBehaviour
         }
     }
 
-    void PlayerTurn()
+    IEnumerator PlayerTurn()
     {
-        dialogueText.text = "Het is tijd voor het openingspleidooi van het OM" + "\r\n" + "Kies een openingspleidooi";
+        
      if (PT == 0)
         {
+            dialogueText.text = "Het is tijd voor het openingspleidooi van het OM" + "\r\n" + "Kies een openingspleidooi";
             Button1.text = "Het OM is er van overtuigd dat Ali, Abdoel, Aldo, Julia, Joyce en Clarissa daders zijn van de moord op oma Zhang.";
             Button2.text = "Het OM is er van overtuigd dat Ali, Abdoel en Aldo daders zijn van de moord op oma Zhang en wij beschouwen Julia, Joyce en Clarissa als medeplichtige bij de moord op oma Zhang.";
             Button3.text = "Het OM is er van overtuigd dat Ali, Abdoel, Aldo, Julia, Joyce en Clarissa onschuldig zijn. ";
         } else if (PT == 4)
             {
-                Button1.text = "Pleidooi 2";
-                Button2.text = "Pleidooi 2";
-                Button3.text = "Pleidooi 2";
-            PT = 2;
-            } /*else if (PT == 2)
+                Button1.text = "";
+                Button2.text = "";
+                Button3.text = "";
+            dialogueText.text = "Roep nu uw getuigen op";
+            yield return new WaitForSeconds(3f);
+            Getuigen.pause();
+        } /*else if (PT == 2)
         {
             Button1.text = "Pleidooi 3";
             Button2.text = "Pleidooi 3";
