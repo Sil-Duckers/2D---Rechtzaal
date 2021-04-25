@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3099891
 Transform:
   m_ObjectHideFlags: 0
@@ -187,6 +187,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 3099890}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &47445307
 GameObject:
   m_ObjectHideFlags: 0
@@ -270,7 +273,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 47445310}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &47445310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +337,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 47445307}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &110276789
 GameObject:
   m_ObjectHideFlags: 0
@@ -405,7 +423,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 110276792}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen11
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &110276792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,6 +487,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 110276789}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &130958485
 GameObject:
   m_ObjectHideFlags: 0
@@ -772,7 +805,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 267294303}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.5, y: -4.1, z: 0}
+  m_LocalPosition: {x: 6.38, y: -4.24, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1046,7 +1079,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 5
   m_TargetDisplay: 0
@@ -1063,6 +1096,7 @@ RectTransform:
   m_Children:
   - {fileID: 3099891}
   - {fileID: 450994353}
+  - {fileID: 1653667290}
   - {fileID: 2069466168}
   - {fileID: 1269799781}
   m_Father: {fileID: 0}
@@ -1086,6 +1120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 3099890}
+  GetuigenStation: {fileID: 1653667289}
+  DialogueUI: {fileID: 2069466167}
+  ButtonUI: {fileID: 1269799780}
 --- !u!1 &490095432
 GameObject:
   m_ObjectHideFlags: 0
@@ -1248,7 +1285,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 494384922}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen17
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &494384922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1300,6 +1349,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 494384919}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
+--- !u!1 &639783778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639783779}
+  m_Layer: 0
+  m_Name: GetuigenBattleStation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &639783779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639783778}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.4164, y: -170.724, z: -3705.96}
+  m_LocalScale: {x: 41.64, y: 41.64, z: 41.64}
+  m_Children: []
+  m_Father: {fileID: 1653667290}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &657513233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1383,7 +1465,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 657513236}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen9
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &657513236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1435,6 +1529,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 657513233}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &662224159
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,6 +1989,85 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 828548298}
   m_CullTransparentMesh: 1
+--- !u!1 &828789774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 828789777}
+  - component: {fileID: 828789776}
+  - component: {fileID: 828789775}
+  m_Layer: 0
+  m_Name: Textwolktext
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &828789775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828789774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &828789776
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828789774}
+  m_CullTransparentMesh: 1
+--- !u!224 &828789777
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828789774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1653667290}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1.32, y: 31.06}
+  m_SizeDelta: {x: 195.17, y: 80.17}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &837261214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2140,7 +2316,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 857683642}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen6
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &857683642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2192,6 +2380,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 857683639}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &864339728
 GameObject:
   m_ObjectHideFlags: 0
@@ -2508,7 +2699,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1082816008}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen10
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1082816008
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2560,6 +2763,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1082816005}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &1099607676
 GameObject:
   m_ObjectHideFlags: 0
@@ -2722,13 +2928,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11500000, guid: 2f4a501fe1ab90642bde6859b9dfec57, type: 3}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2934,7 +3140,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1114389960}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1114389960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2986,6 +3204,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1114389957}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &1138805632
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,7 +3290,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1138805635}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen15
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1138805635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3121,6 +3354,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1138805632}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &1206328469
 GameObject:
   m_ObjectHideFlags: 0
@@ -3204,7 +3440,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1206328472}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen16
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1206328472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3256,6 +3504,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1206328469}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &1235738309
 GameObject:
   m_ObjectHideFlags: 0
@@ -3414,7 +3665,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1242908208}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen18
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1242908208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3466,6 +3729,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1242908205}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &1247333059
 GameObject:
   m_ObjectHideFlags: 0
@@ -3555,7 +3821,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1269799781}
   - component: {fileID: 1269799783}
-  - component: {fileID: 1269799782}
   m_Layer: 0
   m_Name: Groen vlak aanval
   m_TagString: Untagged
@@ -3571,7 +3836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269799780}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.93, y: -103.6, z: 0}
+  m_LocalPosition: {x: -1.9300004, y: -103.6, z: 0}
   m_LocalScale: {x: 3.91, y: 1.7621999, z: 1}
   m_Children:
   - {fileID: 2093931367}
@@ -3579,22 +3844,8 @@ Transform:
   - {fileID: 1740811419}
   - {fileID: 837261215}
   m_Father: {fileID: 472792117}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1269799782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1269799780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36e1441ac7568344b317dff65ea8bd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScoreSlider: {fileID: 0}
-  SliderText: {fileID: 0}
 --- !u!212 &1269799783
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3808,7 +4059,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1303566577}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen12
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1303566577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3860,6 +4123,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1303566574}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &1311367246
 GameObject:
   m_ObjectHideFlags: 0
@@ -4097,7 +4363,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1414144562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen14
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1414144562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4149,6 +4427,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1414144559}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &1420077802
 GameObject:
   m_ObjectHideFlags: 0
@@ -4393,7 +4674,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1484838933}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1484838933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4445,6 +4738,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1484838930}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &1527239310
 GameObject:
   m_ObjectHideFlags: 0
@@ -4524,6 +4820,88 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1527239310}
   m_CullTransparentMesh: 1
+--- !u!1 &1556388794
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1556388795}
+  - component: {fileID: 1556388796}
+  m_Layer: 0
+  m_Name: spraakwolken-01
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1556388795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556388794}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 20, y: 15, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1653667290}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &1556388796
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556388794}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: d3c2b35de828bd74da54b0ecbec5fdd7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12.5, y: 12.5}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1597240121
 GameObject:
   m_ObjectHideFlags: 0
@@ -4607,7 +4985,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1597240124}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen7
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1597240124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4659,6 +5049,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1597240121}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &1652207029
 GameObject:
   m_ObjectHideFlags: 0
@@ -4738,6 +5131,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652207029}
   m_CullTransparentMesh: 1
+--- !u!1 &1653667289
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1653667290}
+  m_Layer: 0
+  m_Name: Getuigen Station
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1653667290
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653667289}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1556388795}
+  - {fileID: 639783779}
+  - {fileID: 828789777}
+  m_Father: {fileID: 472792117}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1659170658
 GameObject:
   m_ObjectHideFlags: 0
@@ -5202,7 +5628,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1770366472}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen8
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1770366472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5254,6 +5692,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1770366469}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &1824043490
 GameObject:
   m_ObjectHideFlags: 0
@@ -5337,7 +5778,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1824043493}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen13
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1824043493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5389,6 +5842,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1824043490}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &1841178236
 GameObject:
   m_ObjectHideFlags: 0
@@ -5499,14 +5955,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 4871129117986201745, guid: 580f1e1ce4905994ba919157be43c0c6, type: 3}
   enemyPrefab: {fileID: 7327600671766224099, guid: 6b6b5306d0ac74f4eb5351e4a6c52723, type: 3}
+  GPrefab1: {fileID: 5698944256834242068, guid: 767225b6a75c40c429293f99c08670f6, type: 3}
   playerBattleStation: {fileID: 267294304}
   enemyBattleStation: {fileID: 337891626}
+  GetuigenBattleStation: {fileID: 639783779}
   dialogueText: {fileID: 1099607678}
+  textWolk: {fileID: 828789775}
   Button1: {fileID: 1420077804}
   Button2: {fileID: 1652207031}
   Button3: {fileID: 737313590}
   battleScore: {fileID: 2069466169}
-  Getuigen: {fileID: 3099892}
+  UI: {fileID: 472792118}
   state: 0
 --- !u!4 &1859174233
 Transform:
@@ -5659,14 +6118,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069466167}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.0068, y: 144.5004, z: 0}
+  m_LocalPosition: {x: -9.006798, y: 144.5004, z: 0}
   m_LocalScale: {x: 5.874, y: 1.7621999, z: 1}
   m_Children:
   - {fileID: 1099607677}
   - {fileID: 1719310030}
   - {fileID: 1446522254}
   m_Father: {fileID: 472792117}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2069466169
 MonoBehaviour:
@@ -5985,7 +6444,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2111364465}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1859174232}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+        m_MethodName: OnGetuigen5
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2111364465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6037,6 +6508,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 2111364462}
+  GetuigenStation: {fileID: 0}
+  DialogueUI: {fileID: 0}
+  ButtonUI: {fileID: 0}
 --- !u!1 &2128912726
 GameObject:
   m_ObjectHideFlags: 0

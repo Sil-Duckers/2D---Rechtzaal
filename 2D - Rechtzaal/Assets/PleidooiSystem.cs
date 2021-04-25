@@ -10,14 +10,17 @@ public class PleidooiSystem : MonoBehaviour
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
+    public GameObject GPrefab1; // dit laadt slechts de eerste enemy prefab in de game. Dit moet dus nog 17x
 
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
+    public Transform GetuigenBattleStation;
 
     Unit playerUnit;
     Unit enemyUnit;
 
     public Text dialogueText;
+    public Text textWolk;
 
     public Text Button1;
     public Text Button2;
@@ -25,7 +28,8 @@ public class PleidooiSystem : MonoBehaviour
 
 
     public BattleSlider battleScore; // hiermee call ik het script Battlelsider in, noem het battlescore, kan evt vaker doen onder andere naam
-    public GetuigenMenu Getuigen;
+    public GetuigenMenu UI;
+    
 
     public BattleState state;
 
@@ -129,7 +133,6 @@ public class PleidooiSystem : MonoBehaviour
             StartCoroutine(EnemyTurn());
         }*/
     }
-
     IEnumerator PlayerAttack2()
     {   // Aanval 2
 
@@ -190,7 +193,6 @@ public class PleidooiSystem : MonoBehaviour
         }*/
 
     }
-
     IEnumerator PlayerAttack3()
     {   // Aanval 3
         if (PT == 0)
@@ -247,6 +249,7 @@ public class PleidooiSystem : MonoBehaviour
         }
         */
     }
+    
     IEnumerator EnemyTurn()
     {
         if (PT == 3)
@@ -272,10 +275,32 @@ public class PleidooiSystem : MonoBehaviour
 
                 state = BattleState.PLAYERTURN;
                 StartCoroutine(PlayerTurn());
-         } 
-        
-            
-        
+         } else 
+         
+         if (PT == 4) // hier kan de enemy een getuigen oproepen / iets doen? 
+        {
+            dialogueText.text = "De advocaat van de verdachte mag nu een getuigen oproepen";
+            yield return new WaitForSeconds(3f);
+            dialogueText.text = "Ik kies voor geen getuigen";
+            yield return new WaitForSeconds(3f);
+            PT = 5;
+
+            state = BattleState.PLAYERTURN;
+            StartCoroutine(PlayerTurn());
+        }
+
+        else
+
+         if (PT == 5) // hier kan de enemy een 2e getuigen oproepen / iets doen? 
+        { // Dit is tevens het einde van dag één. Nu kan een nieuwe Scene geladen worden. Dit is scene Start Pleidooi. JE kan een nieuwe aanmaken. Dan moet dit script gekopieerd worden. En alle variabelen opnieuw toegewezen enzo.
+
+            PT = 6;
+            state = BattleState.PLAYERTURN;
+            StartCoroutine(PlayerTurn());
+        } 
+
+
+
 
     }
 
@@ -299,21 +324,17 @@ public class PleidooiSystem : MonoBehaviour
             Button1.text = "Het OM is er van overtuigd dat Ali, Abdoel, Aldo, Julia, Joyce en Clarissa daders zijn van de moord op oma Zhang.";
             Button2.text = "Het OM is er van overtuigd dat Ali, Abdoel en Aldo daders zijn van de moord op oma Zhang en wij beschouwen Julia, Joyce en Clarissa als medeplichtige bij de moord op oma Zhang.";
             Button3.text = "Het OM is er van overtuigd dat Ali, Abdoel, Aldo, Julia, Joyce en Clarissa onschuldig zijn. ";
-        } else if (PT == 4)
+        } else if (PT >= 4)
             {
                 Button1.text = "";
                 Button2.text = "";
                 Button3.text = "";
             dialogueText.text = "Roep nu uw getuigen op";
-            yield return new WaitForSeconds(1f);
-            Getuigen.pause();
-        } /*else if (PT == 2)
-        {
-            Button1.text = "Pleidooi 3";
-            Button2.text = "Pleidooi 3";
-            Button3.text = "Pleidooi 3";
-        }
-       */
+            yield return new WaitForSeconds(4f);
+            UI.ButtonOff();
+            UI.ListOn();
+            
+        } 
     }
     // Dit zijn de functies voor als de 3 aanval buttons ingedrukt worden
     public void OnAttackButton1() // new function to trigger action when attack is pressed.
@@ -414,7 +435,7 @@ public class PleidooiSystem : MonoBehaviour
         if (state != BattleState.PLAYERTURN)
             return;
         //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuige11()); // pause during attack
+        StartCoroutine(PlayerGetuigen11()); // pause during attack
     }
     public void OnGetuigen12()
     {
@@ -468,10 +489,124 @@ public class PleidooiSystem : MonoBehaviour
     
     IEnumerator PlayerGetuigen1()
     {
-        dialogueText.text = playerUnit.Unitname + " kiest om Mr Zhang te verhoren";
         yield return new WaitForSeconds(1f);
-         dialogueText.text = "Mr Zhang "
+        UI.ListOff(); // Deze zet de lijst met getuigen uit
+        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang het woord is aan u";
+        yield return new WaitForSeconds(1f);
+        textWolk.text = "Op 3 juli 1993 waren mijn vrouw en ik in Tongeren in België omdat wij daar een nieuw restaurant hadden geopend. Mijn moeder, oma Zhang, paste op onze kinderen in ons huis zoals zij al vaker deed. In ons huis wonen ook twee hulpkoks, Ting Liao en Guang Yin.";
+        playerUnit.TakeDamage(10); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
+        battleScore.SetScore(playerUnit.score);
+        dialogueText.text = "Bedankt Mr Zhang";
+        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
+        state = BattleState.ENEMYTURN;
+        StartCoroutine(EnemyTurn());
     }
-
+    IEnumerator PlayerGetuigen2()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen3()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen4()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen5()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen6()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen7()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen8()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen9()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen10()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen11()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen12()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen13()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen14()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen15()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen16()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen17()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
+    IEnumerator PlayerGetuigen18()
+    {
+        dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+        dialogueText.text = "Mr Zhang ";
+    }
 
 }
