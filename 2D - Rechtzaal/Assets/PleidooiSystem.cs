@@ -81,11 +81,11 @@ public class PleidooiSystem : MonoBehaviour
         if (PT == 0)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "Het OM is er van overtuigd dat Ali, Abdoel, Aldo, Julia, Joyce en Clarissa daders zijn van de moord op oma Zhang.";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP1A); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
-                        yield return new WaitForSeconds(3f);
+                        yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
             Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
@@ -94,12 +94,12 @@ public class PleidooiSystem : MonoBehaviour
         } else if (PT == 1)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP2A); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
@@ -108,29 +108,26 @@ public class PleidooiSystem : MonoBehaviour
         } else if (PT == 2)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP3A); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             dialogueText.text = "Dit was het starpleidooi.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
             PT += 1;
-        }
-        else
-       /* if (isDead == 2)
-        {
-            state = BattleState.WON;
-            EndBattle();
-        }else*/
-       if (PT == 3)
-        {
+
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
+        /* else if (PT == 3)
+        {
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+        }*/
     }
 
     IEnumerator PlayerAttack2()
@@ -139,13 +136,13 @@ public class PleidooiSystem : MonoBehaviour
         if (PT == 0)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "Het OM is er van overtuigd dat Ali, Abdoel en Aldo daders zijn van de moord op oma Zhang en wij beschouwen Julia, Joyce en Clarissa als medeplichtige bij de moord op oma Zhang.";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP1B); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
             
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
             Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
@@ -155,13 +152,13 @@ public class PleidooiSystem : MonoBehaviour
         else if (PT == 1)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP2B); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
             
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
@@ -171,29 +168,26 @@ public class PleidooiSystem : MonoBehaviour
         else if (PT == 2)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP3B); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
             
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             dialogueText.text = "Dit was het starpleidooi.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
             PT += 1;
-        }
-        /* if (isDead == 2)
-        {
-            state = BattleState.WON;
-            EndBattle();
-        }else*/
-        if (PT == 3)
+
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+        } /* else if (PT == 3)
         {
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
-        }
+        }*/
 
     }
 
@@ -202,12 +196,12 @@ public class PleidooiSystem : MonoBehaviour
         if (PT == 0)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "Het OM is er van overtuigd dat Ali, Abdoel, Aldo, Julia, Joyce en Clarissa onschuldig zijn. ";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP1C); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
            
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
             Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
@@ -217,13 +211,13 @@ public class PleidooiSystem : MonoBehaviour
         else if (PT == 1)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP2C); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
             
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
@@ -233,57 +227,52 @@ public class PleidooiSystem : MonoBehaviour
         else if (PT == 2)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             int isDead = playerUnit.TakeDamage(playerUnit.OP3C); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             dialogueText.text = "Dit was het starpleidooi.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
             PT += 1;
-        }
-        
-        /* if (isDead == 2)
-        {
-            state = BattleState.WON;
-            EndBattle();
-        }else*/
-        if (PT == 3)
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+        } /* else if (PT == 3)
         {
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
-
+        */
     }
     IEnumerator EnemyTurn()
     {
         if (PT == 3)
         {
             dialogueText.text = enemyUnit.unitName + " verteld zijn startpleidooi."; // Aangeven van aanval
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             dialogueText.text = enemyUnit.unitName +"zegt "+ "Mijn cliënten zijn onschuldig";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             dialogueText.text = enemyUnit.unitName + "zegt " + "Het sporenonderzoek van de politie laat geen relatie zien tussen mijn cliënten en de moord op oma Zhang.";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
             dialogueText.text = enemyUnit.unitName + "zegt " + "De verklaring van Annabel plaats mijn cliënten niet op de plaats en tijd van de moord, dus zij kunnen het niet gedaan hebben.";
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(1f);
 
 
             dialogueText.text = "Dit was het openingspleidooi van de Advocaat";
             int isDead = playerUnit.TakeDamage(enemyUnit.OP1A); // damage de player
             battleScore.SetScore(playerUnit.score); //playerHUD.SetHP, slider verzetten
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             PT = 4;
 
                 state = BattleState.PLAYERTURN;
                 StartCoroutine(PlayerTurn());
-         }
+         } 
         
             
         
@@ -316,7 +305,7 @@ public class PleidooiSystem : MonoBehaviour
                 Button2.text = "";
                 Button3.text = "";
             dialogueText.text = "Roep nu uw getuigen op";
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(1f);
             Getuigen.pause();
         } /*else if (PT == 2)
         {
@@ -326,7 +315,7 @@ public class PleidooiSystem : MonoBehaviour
         }
        */
     }
-
+    // Dit zijn de functies voor als de 3 aanval buttons ingedrukt worden
     public void OnAttackButton1() // new function to trigger action when attack is pressed.
     {
         if (state != BattleState.PLAYERTURN) // Checkt of speler aan de beurt is
@@ -334,7 +323,6 @@ public class PleidooiSystem : MonoBehaviour
         //playerUnit.MinusTime(1);
         StartCoroutine(PlayerAttack1()); // pause during attack
     }
-
     public void OnAttackButton2() // new function to trigger action when attack is pressed.
     {
         if (state != BattleState.PLAYERTURN) // Checkt of speler aan de beurt is
@@ -342,7 +330,6 @@ public class PleidooiSystem : MonoBehaviour
         //playerUnit.MinusTime(1);
         StartCoroutine(PlayerAttack2()); // pause during attack
     }
-
     public void OnAttackButton3() // new function to trigger action when attack is pressed.
     {
         if (state != BattleState.PLAYERTURN) // Checkt of speler aan de beurt is
@@ -350,4 +337,141 @@ public class PleidooiSystem : MonoBehaviour
         //playerUnit.MinusTime(1);
         StartCoroutine(PlayerAttack3()); // pause during attack
     }
+    
+    //Hier volgen de functies voor als de getuigen button ingedrukt wordt
+    public void OnGetuigen1() 
+    {
+        if (state != BattleState.PLAYERTURN) 
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen1()); // pause during attack
+    }
+    public void OnGetuigen2()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen2()); // pause during attack
+    }
+    public void OnGetuigen3()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen3()); // pause during attack
+    }
+    public void OnGetuigen4()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen4()); // pause during attack
+    }
+    public void OnGetuigen5()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen5()); // pause during attack
+    }
+    public void OnGetuigen6()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen6()); // pause during attack
+    }
+    public void OnGetuigen7()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen7()); // pause during attack
+    }
+    public void OnGetuigen8()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen8()); // pause during attack
+    }
+    public void OnGetuigen9()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen9()); // pause during attack
+    }
+    public void OnGetuigen10()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen10()); // pause during attack
+    }
+    public void OnGetuigen11()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuige11()); // pause during attack
+    }
+    public void OnGetuigen12()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen12()); // pause during attack
+    }
+    public void OnGetuigen13()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen13()); // pause during attack
+    }
+    public void OnGetuigen14()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen14()); // pause during attack
+    }
+    public void OnGetuigen15()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen15()); // pause during attack
+    }
+    public void OnGetuigen16()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen16()); // pause during attack
+    }
+    public void OnGetuigen17()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen17()); // pause during attack
+    }
+    public void OnGetuigen18()
+    {
+        if (state != BattleState.PLAYERTURN)
+            return;
+        //playerUnit.MinusTime(1);
+        StartCoroutine(PlayerGetuigen18()); // pause during attack
+    }
+    
+    IEnumerator PlayerGetuigen1()
+    {
+        dialogueText.text = playerUnit.Unitname + " kiest om Mr Zhang te verhoren";
+        yield return new WaitForSeconds(1f);
+         dialogueText.text = "Mr Zhang "
+    }
+
+
 }

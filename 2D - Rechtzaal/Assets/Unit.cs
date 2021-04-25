@@ -7,7 +7,7 @@ public class Unit : MonoBehaviour
 
     public string unitName;
     public int unitLevel;
-    public int timePoints;
+    public int GetuigenCount;
     
     public int score;
     public int maxScore;
