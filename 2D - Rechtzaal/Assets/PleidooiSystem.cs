@@ -11,6 +11,24 @@ public class PleidooiSystem : MonoBehaviour
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
     public GameObject GPrefab1; // dit laadt slechts de eerste enemy prefab in de game. Dit moet dus nog 17x
+    public GameObject GPrefab2;
+    public GameObject GPrefab3;
+    public GameObject GPrefab4;
+    public GameObject GPrefab5;
+    public GameObject GPrefab6;
+    public GameObject GPrefab7;
+    public GameObject GPrefab8;
+    public GameObject GPrefab9;
+    public GameObject GPrefab10;
+    public GameObject GPrefab11;
+    public GameObject GPrefab12;
+    public GameObject GPrefab13;
+    public GameObject GPrefab14;
+    public GameObject GPrefab15;
+    public GameObject GPrefab16;
+    public GameObject GPrefab17;
+    public GameObject GPrefab18;
+    
 
     public Transform playerBattleStation;
     public Transform enemyBattleStation;
@@ -33,8 +51,10 @@ public class PleidooiSystem : MonoBehaviour
 
     public BattleState state;
 
-    int A3;
     int PT;
+    int G1;
+    int G2 = 0;
+    int G3;
 
     void Start()
     {
@@ -273,46 +293,79 @@ public class PleidooiSystem : MonoBehaviour
             yield return new WaitForSeconds(1f);
             PT = 4;
 
-                state = BattleState.PLAYERTURN;
-                StartCoroutine(PlayerTurn());
-         } else 
-         
-         if (PT == 4) // hier kan de enemy een getuigen oproepen / iets doen? 
-        {
-            dialogueText.text = "De advocaat van de verdachte mag nu een getuigen oproepen";
-            yield return new WaitForSeconds(3f);
-            dialogueText.text = "Ik kies voor geen getuigen";
-            yield return new WaitForSeconds(3f);
-            PT = 5;
 
+            dialogueText.text = "De advocaat van de verdachte mag nu drie getuigen oproepen";
+            yield return new WaitForSeconds(3f);
+
+
+            UI.ButtonOff();
+            UI.GetuigenOn();
+            // Getuigen 1 --------------------------------------------------------------------
+            yield return new WaitForSeconds(1f);
+            GameObject GE1 = Instantiate(GPrefab12, GetuigenBattleStation); // Klopt nog niet
+            dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren"; //hier moet de naam nog bij
+            yield return new WaitForSeconds(1f);
+            dialogueText.text = "Mr Zhang het woord is aan u"; // idem
+            yield return new WaitForSeconds(1f);
+            textWolk.text = ""; // hier komt zijn verhaal
+            playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
+            battleScore.SetScore(playerUnit.score); // update de slider
+            dialogueText.text = "Bedankt Mr Zhang"; // update
+            Destroy(GE1); 
+
+            yield return new WaitForSeconds(3f);
+
+
+            // Getuigen 2 --------------------------------------------------------------------
+            dialogueText.text = "De advocaat van de verdachte mag nu een tweede getuigen oproepen";
+            yield return new WaitForSeconds(1f);
+            GameObject GE2 = Instantiate(GPrefab13, GetuigenBattleStation); // Klopt nog niet
+            dialogueText.text = playerUnit.unitName + " kiest om dingdong te verhoren"; //hier moet de naam nog bij
+            yield return new WaitForSeconds(1f);
+            dialogueText.text = "Mr dingdong het woord is aan u"; // idem
+            yield return new WaitForSeconds(1f);
+            textWolk.text = ""; // hier komt zijn verhaal
+            playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
+            battleScore.SetScore(playerUnit.score); // update de slider
+            dialogueText.text = "Bedankt Mr dingdong"; // update
+            Destroy(GE2);
+            yield return new WaitForSeconds(3f);
+
+            // Getuigen 3--------------------------------------------------------------------
+            dialogueText.text = "De advocaat van de verdachte mag nu de derde getuigen oproepen";
+            yield return new WaitForSeconds(1f);
+            GameObject GE3 = Instantiate(GPrefab14, GetuigenBattleStation); // Klopt nog niet
+            dialogueText.text = playerUnit.unitName + " kiest om appelsap te verhoren"; //hier moet de naam nog bij
+            yield return new WaitForSeconds(1f);
+            dialogueText.text = "Mr appelsap het woord is aan u"; // idem
+            yield return new WaitForSeconds(1f);
+            textWolk.text = ""; // hier komt zijn verhaal
+            playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
+            battleScore.SetScore(playerUnit.score); // update de slider
+            dialogueText.text = "Bedankt Mr appelsap"; // update
+            Destroy(GE3);
+            yield return new WaitForSeconds(3f);
+
+            state = BattleState.ENEMYTURN;
+            StartCoroutine(EnemyTurn());
+
+            state = BattleState.PLAYERTURN;
+            StartCoroutine(PlayerTurn());
+        } else
+                
+        if (PT == 4)
+        {
             state = BattleState.PLAYERTURN;
             StartCoroutine(PlayerTurn());
         }
-
-        else
-
-         if (PT == 5) // hier kan de enemy een 2e getuigen oproepen / iets doen? 
-        { // Dit is tevens het einde van dag één. Nu kan een nieuwe Scene geladen worden. Dit is scene Start Pleidooi. JE kan een nieuwe aanmaken. Dan moet dit script gekopieerd worden. En alle variabelen opnieuw toegewezen enzo.
-
-            PT = 6;
-            state = BattleState.PLAYERTURN;
-            StartCoroutine(PlayerTurn());
-        } 
-
-
-
 
     }
 
-    void EndBattle()
+    IEnumerator EndDag1()
     {
-        if(state == BattleState.WON)
-        {
-            dialogueText.text = "Je hebt Gewonnen";
-        } else if (state == BattleState.LOST)
-        {
-            dialogueText.text = enemyUnit.unitName + " has won" + "\r\n" + "You hef lost";
-        }
+        dialogueText.text = "Dit was de eerste zitting";
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(5f);
     }
 
     IEnumerator PlayerTurn()
@@ -334,7 +387,10 @@ public class PleidooiSystem : MonoBehaviour
             UI.ButtonOff();
             UI.ListOn();
             
-        } 
+        } else if (G1 >= 0)
+        {
+            UI.ListOn();
+        }
     }
     // Dit zijn de functies voor als de 3 aanval buttons ingedrukt worden
     public void OnAttackButton1() // new function to trigger action when attack is pressed.
@@ -362,129 +418,501 @@ public class PleidooiSystem : MonoBehaviour
     //Hier volgen de functies voor als de getuigen button ingedrukt wordt
     public void OnGetuigen1() 
     {
-        if (state != BattleState.PLAYERTURN) 
+        if (state != BattleState.PLAYERTURN || G1 == 1 || G2 == 1)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen1()); // pause during attack
+        }else 
+                   
+        if (G1 == 0)
+        {
+            G1 = 1;
+            StartCoroutine(PlayerGetuigen1());
+        } else
+        if (G2 == 0)
+        {
+            G2 = 1;
+            StartCoroutine(PlayerGetuigen1());
+        } 
+        else 
+        if (G2 != 0)
+        {
+            G3 = 1;
+            StartCoroutine(PlayerGetuigen1());
+        }
+        else
+            StartCoroutine(PlayerGetuigen1()); // pause during attack
     }
     public void OnGetuigen2()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 2 || G2 == 2)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen2()); // pause during attack
+        }
+        else
+
+         if (G1 == 0)
+        {
+            G1 = 2;
+            StartCoroutine(PlayerGetuigen2());
+        }
+        else
+         if (G2 == 0)
+        {
+            G2 = 2;
+            StartCoroutine(PlayerGetuigen2());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 2;
+            StartCoroutine(PlayerGetuigen2());
+        }
+        else
+            StartCoroutine(PlayerGetuigen2()); // pause during attack
     }
     public void OnGetuigen3()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 3 || G2 == 3)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen3()); // pause during attack
+        }
+        else
+
+        if (G1 == 0)
+        {
+            G1 = 3;
+            StartCoroutine(PlayerGetuigen3());
+        }
+        else
+        if (G2 == 0)
+        {
+            G2 = 3;
+            StartCoroutine(PlayerGetuigen3());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 3;
+            StartCoroutine(PlayerGetuigen3());
+        }
+        else
+            StartCoroutine(PlayerGetuigen3()); // pause during attack
     }
     public void OnGetuigen4()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 4 || G2 == 4)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen4()); // pause during attack
+        }
+        else
+
+         if (G1 == 0)
+        {
+            G1 = 4;
+            StartCoroutine(PlayerGetuigen4());
+        }
+        else
+         if (G2 == 0)
+        {
+            G2 = 4;
+            StartCoroutine(PlayerGetuigen4());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 4;
+            StartCoroutine(PlayerGetuigen4());
+        }
+        else
+            StartCoroutine(PlayerGetuigen4()); // pause during attack
     }
     public void OnGetuigen5()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 5 || G2 == 5)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen5()); // pause during attack
+        }
+        else
+
+        if (G1 == 0)
+        {
+            G1 = 5;
+            StartCoroutine(PlayerGetuigen5());
+        }
+        else
+        if (G2 == 0)
+        {
+            G2 = 5;
+            StartCoroutine(PlayerGetuigen5());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 5;
+            StartCoroutine(PlayerGetuigen5());
+        }
+        else
+            StartCoroutine(PlayerGetuigen5()); // pause during attack
     }
     public void OnGetuigen6()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 6 || G2 == 6)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen6()); // pause during attack
+        }
+        else
+
+        if (G1 == 0)
+        {
+            G1 = 6;
+            StartCoroutine(PlayerGetuigen6());
+        }
+        else
+        if (G2 == 0)
+        {
+            G2 = 6;
+            StartCoroutine(PlayerGetuigen6());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 6;
+            StartCoroutine(PlayerGetuigen6());
+        }
+        else
+            StartCoroutine(PlayerGetuigen6()); // pause during attack
     }
     public void OnGetuigen7()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 7 || G2 == 7)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen7()); // pause during attack
+        }
+        else
+
+        if (G1 == 0)
+        {
+            G1 = 7;
+            StartCoroutine(PlayerGetuigen7());
+        }
+        else
+        if (G2 == 0)
+        {
+            G2 = 7;
+            StartCoroutine(PlayerGetuigen7());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 7;
+            StartCoroutine(PlayerGetuigen7());
+        }
+        else
+            StartCoroutine(PlayerGetuigen7()); // pause during attack
     }
     public void OnGetuigen8()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 8 || G2 == 8)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen8()); // pause during attack
+        }
+        else
+
+        if (G1 == 0)
+        {
+            G1 = 8;
+            StartCoroutine(PlayerGetuigen8());
+        }
+        else
+        if (G2 == 0)
+        {
+            G2 = 8;
+            StartCoroutine(PlayerGetuigen8());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 8;
+            StartCoroutine(PlayerGetuigen8());
+        }
+        else
+            StartCoroutine(PlayerGetuigen8()); // pause during attack
     }
     public void OnGetuigen9()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 9 || G2 == 9)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen9()); // pause during attack
+        }
+        else
+         if (G1 == 0)
+        {
+            G1 = 9;
+            StartCoroutine(PlayerGetuigen9());
+        }
+        else
+         if (G2 == 0)
+        {
+            G2 = 9;
+            StartCoroutine(PlayerGetuigen9());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 9;
+            StartCoroutine(PlayerGetuigen9());
+        }
+        else
+            StartCoroutine(PlayerGetuigen9()); // pause during attack
     }
     public void OnGetuigen10()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 10 || G2 == 10)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen10()); // pause during attack
+        }
+        else
+
+        if (G1 == 0)
+        {
+            G1 = 10;
+            StartCoroutine(PlayerGetuigen10());
+        }
+        else
+        if (G2 == 0)
+        {
+            G2 = 10;
+            StartCoroutine(PlayerGetuigen10());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 10;
+            StartCoroutine(PlayerGetuigen10());
+        }
+        else
+            StartCoroutine(PlayerGetuigen10()); // pause during attack
     }
     public void OnGetuigen11()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 11 || G2 == 11)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen11()); // pause during attack
+        }
+        else
+
+        if (G1 == 0)
+        {
+            G1 = 11;
+            StartCoroutine(PlayerGetuigen11());
+        }else if (G2 == 0)
+        {
+            G1 = 11;
+            StartCoroutine(PlayerGetuigen11());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 11;
+            StartCoroutine(PlayerGetuigen11());
+        }
+
+        else
+            StartCoroutine(PlayerGetuigen11()); // pause during attack
     }
     public void OnGetuigen12()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 12 || G2 == 12)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen12()); // pause during attack
+        }
+        else
+        if (G1 == 0)
+        {
+            G1 = 12;
+            StartCoroutine(PlayerGetuigen12());
+        }
+        else
+        if (G2 == 0)
+        {
+            G2 = 12;
+            StartCoroutine(PlayerGetuigen12());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 12;
+            StartCoroutine(PlayerGetuigen12());
+        }
+        else
+            StartCoroutine(PlayerGetuigen12()); // pause during attack
     }
     public void OnGetuigen13()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 13 || G2 == 13)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen13()); // pause during attack
+        }
+        else 
+        if (G1 == 0)
+        {
+            G1 = 13;
+            StartCoroutine(PlayerGetuigen13());
+        }   
+        else    
+        if (G2 == 0)
+        {
+            G2 = 13;
+            StartCoroutine(PlayerGetuigen13());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 13;
+            StartCoroutine(PlayerGetuigen13());
+        }
+        else
+            StartCoroutine(PlayerGetuigen13()); // pause during attack
     }
     public void OnGetuigen14()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 14 || G2 == 14)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen14()); // pause during attack
+        }
+        else
+
+        if (G1 == 0)
+        {
+            G1 = 14;
+            StartCoroutine(PlayerGetuigen14());
+        }
+        else
+        if (G2 == 0)
+        {
+            G2 = 14;
+            StartCoroutine(PlayerGetuigen14());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 14;
+            StartCoroutine(PlayerGetuigen14());
+        }
+        else
+            StartCoroutine(PlayerGetuigen14()); // pause during attack
     }
     public void OnGetuigen15()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 15 || G2 == 15)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen15()); // pause during attack
+        }
+        else
+
+         if (G1 == 0)
+        {
+            G1 = 15;
+            StartCoroutine(PlayerGetuigen15());
+        }
+        else
+         if (G2 == 0)
+        {
+            G2 = 15;
+            StartCoroutine(PlayerGetuigen15());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 15;
+            StartCoroutine(PlayerGetuigen15());
+        }
+        else
+            StartCoroutine(PlayerGetuigen15()); // pause during attack
     }
     public void OnGetuigen16()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 16 || G2 == 16)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen16()); // pause during attack
+        }
+        else
+
+        if (G1 == 0)
+        {
+            G1 = 16;
+            StartCoroutine(PlayerGetuigen16());
+        }
+        else
+        if (G2 == 0)
+        {
+            G2 = 16;
+            StartCoroutine(PlayerGetuigen16());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 16;
+            StartCoroutine(PlayerGetuigen16());
+        }
+        else
+            StartCoroutine(PlayerGetuigen16()); // pause during attack
     }
     public void OnGetuigen17()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 17 || G2 == 17)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen17()); // pause during attack
+        }
+        else
+
+        if (G1 == 0)
+        {
+            G1 = 17;
+            StartCoroutine(PlayerGetuigen17());
+        }
+        else
+        if (G2 == 0)
+        {
+            G2 = 17;
+            StartCoroutine(PlayerGetuigen17());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 17;
+            StartCoroutine(PlayerGetuigen17());
+        }
+        else
+            StartCoroutine(PlayerGetuigen17()); // pause during attack
     }
     public void OnGetuigen18()
     {
-        if (state != BattleState.PLAYERTURN)
+        if (state != BattleState.PLAYERTURN || G1 == 18 || G2 == 18)
+        {
             return;
-        //playerUnit.MinusTime(1);
-        StartCoroutine(PlayerGetuigen18()); // pause during attack
+        }
+        else
+
+        if (G1 == 0)
+        {
+            G1 = 18;
+            StartCoroutine(PlayerGetuigen18());
+        }
+        else
+        if (G2 == 0)
+        {
+            G2 = 18;
+            StartCoroutine(PlayerGetuigen18());
+        }
+        else
+        if (G2 != 0)
+        {
+            G3 = 18;
+            StartCoroutine(PlayerGetuigen18());
+        }
+        else
+            StartCoroutine(PlayerGetuigen18()); // pause during attack
     }
     
     IEnumerator PlayerGetuigen1()
@@ -503,8 +931,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mr Zhang";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen2()
     {
@@ -522,8 +954,11 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mw Huang";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        } else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen3()
     {
@@ -541,8 +976,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Chong Kong";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen4()
     {
@@ -560,8 +999,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Fai She";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen5()
     {
@@ -579,8 +1022,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Guang Yin";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen6()
     {
@@ -598,8 +1045,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Park Tao";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen7()
     {
@@ -617,8 +1068,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Ting Liao";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen8()
     {
@@ -630,15 +1085,18 @@ public class PleidooiSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         dialogueText.text = "Wei Deng het woord is aan u";
         yield return new WaitForSeconds(1f);
-        textWolk.text = "Ik werkte bij Golden Garden net een week. Op zaterdag 3 juli 1993 werkte ik in het restaurant in Tongeren. Na sluiting zaten we nog te eten tot 0:30. Ik heb toen aan eigenaar Zhang gevraagd of hij nog naar Sittard gaat, want er is niet meer genoeg babi pangang-vlees en babi pangang-saus. Omdat hij dat niet van plan was, dacht ik dat ik dan zelf wel kon gaan de volgende ochtend. Ik zou op zondagochtend om 9:00 bij Golden Garden zijn om het op te halen. Ik vertrok even later met een collega richting Nederland en zette hem af in Maastricht.Ik kwam thuis, in Weert, rond 1:50 waarna ik in slaap ben gevallen.De volgende ochtend, zondags, had ik mij verslapen en stapte ik snel in de auto. Voor de grens ging ik even tanken, maar het was heel erg druk en ik moest wel 20 - 25 min wachten. Ik kon pas om 11:30 weer doorrijden en kwam rond het middaguur aan in Tongeren.
-";
+        textWolk.text = "Ik werkte bij Golden Garden net een week. Op zaterdag 3 juli 1993 werkte ik in het restaurant in Tongeren. Na sluiting zaten we nog te eten tot 0:30. Ik heb toen aan eigenaar Zhang gevraagd of hij nog naar Sittard gaat, want er is niet meer genoeg babi pangang-vlees en babi pangang-saus. Omdat hij dat niet van plan was, dacht ik dat ik dan zelf wel kon gaan de volgende ochtend. Ik zou op zondagochtend om 9:00 bij Golden Garden zijn om het op te halen. Ik vertrok even later met een collega richting Nederland en zette hem af in Maastricht.Ik kwam thuis, in Weert, rond 1:50 waarna ik in slaap ben gevallen.De volgende ochtend, zondags, had ik mij verslapen en stapte ik snel in de auto. Voor de grens ging ik even tanken, maar het was heel erg druk en ik moest wel 20 - 25 min wachten. Ik kon pas om 11:30 weer doorrijden en kwam rond het middaguur aan in Tongeren.";
         playerUnit.TakeDamage(-5); // Hierbij zeg je dus -5 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
         dialogueText.text = "Bedankt Wei Deng";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen9()
     {
@@ -656,8 +1114,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Kelvin";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen10()
     {
@@ -675,8 +1137,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mr Voortman";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen11()
     {
@@ -694,8 +1160,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mw Evers";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen12()
     {
@@ -713,8 +1183,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mw Vermeulen";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen13()
     {
@@ -732,8 +1206,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mw Kuipers";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen14()
     {
@@ -751,8 +1229,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mr Van der Laan";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen15()
     {
@@ -770,8 +1252,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mw Boonstra";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen16()
     {
@@ -789,8 +1275,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Jennifer";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen17()
     {
@@ -808,8 +1298,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Annabel";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
     IEnumerator PlayerGetuigen18()
     {
@@ -827,8 +1321,12 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Bedankt Chi Li";
         yield return new WaitForSeconds(3f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
-        state = BattleState.ENEMYTURN;
-        StartCoroutine(EnemyTurn());
+        if (G3 != 0)
+        {
+            StartCoroutine(EndDag1());
+        }
+        else
+            StartCoroutine(PlayerTurn());
     }
 
 }
