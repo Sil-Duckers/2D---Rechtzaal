@@ -2805,38 +2805,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 986158546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec78ea7cd3b1664459855338ee5af236, type: 3}
+  m_Script: {fileID: 11500000, guid: 297bb725e9e59d043888234083192327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 4871129117986201745, guid: 580f1e1ce4905994ba919157be43c0c6, type: 3}
   enemyPrefab: {fileID: 7327600671766224099, guid: 6b6b5306d0ac74f4eb5351e4a6c52723, type: 3}
-  GPrefab1: {fileID: 5698944256834242068, guid: 767225b6a75c40c429293f99c08670f6, type: 3}
-  GPrefab2: {fileID: 5779976645950288314, guid: 246d8c91fb7323d42ada302e43d4be80, type: 3}
-  GPrefab3: {fileID: 1554423148615427467, guid: 042be2780725c414bad010bab91d39a6, type: 3}
-  GPrefab4: {fileID: 5782118126598548366, guid: 1091b2d215e936b488e90df147eab044, type: 3}
-  GPrefab5: {fileID: 7880619551965611616, guid: 596b978a2dbdf344eb852555153e0a67, type: 3}
-  GPrefab6: {fileID: 930392104342131299, guid: 762e91ae42a6c354ca939cb067943d98, type: 3}
-  GPrefab7: {fileID: 8752168369397345036, guid: b68b17b63287f7f409cdfa12746c9d86, type: 3}
-  GPrefab8: {fileID: 4864359476384738838, guid: 7bd535eb7d76eab4498c802b3977d5ec, type: 3}
-  GPrefab9: {fileID: 6175301331511502733, guid: bca2dfc9141125341ac41870be4568ae, type: 3}
-  GPrefab10: {fileID: 5813890042985283468, guid: a7135f2eef2028345b506859ee9faa58, type: 3}
-  GPrefab11: {fileID: 7986316713196654602, guid: bc59476841d077747831c19ed9f04aa2, type: 3}
-  GPrefab12: {fileID: 5043297112729875902, guid: 2696c69613a54b64b8edaf3486e17322, type: 3}
-  GPrefab13: {fileID: 9169523893636949861, guid: 2c140256fc3d3ba45b5405a49c32ce12, type: 3}
-  GPrefab14: {fileID: 1791710426093608932, guid: 5681decf9e4283b49b94909289b60dab, type: 3}
-  GPrefab15: {fileID: 2873648221806290742, guid: 2b8886ce6b7f3a947add4659fe32af6c, type: 3}
-  GPrefab16: {fileID: 7321000356386322939, guid: 671ec81e77b52ad46bb7cbaef56ebc40, type: 3}
-  GPrefab17: {fileID: 846038288923677837, guid: 2048e1c6ad706104babd584de4f33176, type: 3}
-  GPrefab18: {fileID: 118755892222172508, guid: bf0dff4f171233d40b5cbe11df7f2648, type: 3}
   playerBattleStation: {fileID: 675398942}
   enemyBattleStation: {fileID: 69700195}
-  GetuigenBattleStation: {fileID: 768949397}
+  GetuigenBattleStation: {fileID: 1895674360}
   dialogueText: {fileID: 1375987250}
   textWolk: {fileID: 1719207156}
   Button1: {fileID: 285266258}
   Button2: {fileID: 2078258759}
   Button3: {fileID: 1870757093}
-  battleScore: {fileID: 1138354905}
+  battleScore: {fileID: 1508990582}
   UI: {fileID: 519296762}
   state: 0
 --- !u!4 &986158548
@@ -3692,7 +3674,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1138354904}
   - component: {fileID: 1138354903}
-  - component: {fileID: 1138354905}
   m_Layer: 5
   m_Name: Score Slider
   m_TagString: Untagged
@@ -3773,20 +3754,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 14.3}
   m_SizeDelta: {x: 446.51, y: 27.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1138354905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1138354902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a36e1441ac7568344b317dff65ea8bd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ScoreSlider: {fileID: 1138354903}
-  SliderText: {fileID: 0}
 --- !u!1 &1159407909
 GameObject:
   m_ObjectHideFlags: 0
@@ -4315,8 +4282,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 986158547}
-        m_TargetAssemblyTypeName: TweeSystem, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
         m_MethodName: OnAttackButton3
         m_Mode: 1
         m_Arguments:
@@ -4668,7 +4635,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dit is de TWEEDEZITTING
+  m_Text: Dit is het STARTPLEIDOOI
 --- !u!1 &1422527876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4752,8 +4719,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 986158547}
-        m_TargetAssemblyTypeName: TweeSystem, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
         m_MethodName: OnAttackButton2
         m_Mode: 1
         m_Arguments:
@@ -6572,8 +6539,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 986158547}
-        m_TargetAssemblyTypeName: TweeSystem, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
         m_MethodName: OnAttackButton1
         m_Mode: 1
         m_Arguments:
