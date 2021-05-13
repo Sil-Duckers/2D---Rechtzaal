@@ -209,6 +209,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &123858974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +363,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &185116192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1344,6 +1352,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &362812279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,6 +1698,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 1895674359}
   DialogueUI: {fileID: 1508990581}
   ButtonUI: {fileID: 1450265560}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &519296763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1827,6 +1843,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &532462987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2052,6 +2072,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &632150331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2377,6 +2401,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &791580862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2606,6 +2634,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &951622314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2966,6 +2998,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &1003913144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3116,6 +3152,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &1025933973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3266,6 +3306,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &1041661893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3416,6 +3460,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &1049888853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3810,6 +3858,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &1159407912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4105,6 +4157,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &1248013695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4282,8 +4338,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+      - m_Target: {fileID: 986158547}
+        m_TargetAssemblyTypeName: DrieSystem, Assembly-CSharp
         m_MethodName: OnAttackButton3
         m_Mode: 1
         m_Arguments:
@@ -4463,6 +4519,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &1313723990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4635,7 +4695,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dit is het STARTPLEIDOOI
+  m_Text: Dit is het DRIEZITTING
 --- !u!1 &1422527876
 GameObject:
   m_ObjectHideFlags: 0
@@ -4719,8 +4779,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+      - m_Target: {fileID: 986158547}
+        m_TargetAssemblyTypeName: DrieSystem, Assembly-CSharp
         m_MethodName: OnAttackButton2
         m_Mode: 1
         m_Arguments:
@@ -5248,6 +5308,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &1614582301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5372,9 +5436,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GetuigenMenuUI: {fileID: 1624183568}
-  GetuigenStation: {fileID: 0}
-  DialogueUI: {fileID: 0}
-  ButtonUI: {fileID: 0}
+  GetuigenStation: {fileID: 1895674359}
+  DialogueUI: {fileID: 1508990581}
+  ButtonUI: {fileID: 1450265560}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!4 &1624183570
 Transform:
   m_ObjectHideFlags: 0
@@ -5781,6 +5849,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &1728214847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6089,6 +6161,10 @@ MonoBehaviour:
   GetuigenStation: {fileID: 0}
   DialogueUI: {fileID: 0}
   ButtonUI: {fileID: 0}
+  Bewijsstuk1: {fileID: 0}
+  Bewijsstuk2: {fileID: 0}
+  Bewijsstuk3: {fileID: 0}
+  Bewijsstuk4: {fileID: 0}
 --- !u!114 &1841491350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6539,8 +6615,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PleidooiSystem, Assembly-CSharp
+      - m_Target: {fileID: 986158547}
+        m_TargetAssemblyTypeName: DrieSystem, Assembly-CSharp
         m_MethodName: OnAttackButton1
         m_Mode: 1
         m_Arguments:

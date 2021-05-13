@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Start Pleidooi.unity
+    guid: 1a9cfa25eec09684e936fbe90edcba23
+  - enabled: 1
+    path: Assets/Scenes/2e zitting.unity
+    guid: 85f918d0e131d6e4b91de9e04ef9a74a
+  - enabled: 1
+    path: Assets/Scenes/3e zitting.unity
+    guid: 00806caac9e8e7e41a5d1832e8e5f20d
   m_configObjects: {}

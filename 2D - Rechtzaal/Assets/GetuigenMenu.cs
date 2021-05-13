@@ -10,8 +10,13 @@ public class GetuigenMenu : MonoBehaviour
     public GameObject GetuigenStation;
     public GameObject DialogueUI;
     public GameObject ButtonUI;
+    public GameObject Bewijsstuk1;
+    public GameObject Bewijsstuk2;
+    public GameObject Bewijsstuk3;
+    public GameObject Bewijsstuk4;
 
-    
+
+
     // Getuigen visual
     public void ListOn()
     {
@@ -50,6 +55,42 @@ public class GetuigenMenu : MonoBehaviour
     public void ButtonOff()
     {
         ButtonUI.SetActive(false);
+    }
+
+    public void BS1On()
+    {
+        Bewijsstuk1.SetActive(true);
+    }
+    public void BS1Off()
+    {
+        Bewijsstuk1.SetActive(false);
+    }
+
+    public void BS2On()
+    {
+        Bewijsstuk2.SetActive(true);
+    }
+    public void BS2Off()
+    {
+        Bewijsstuk2.SetActive(false);
+    }
+
+    public void BS3On()
+    {
+        Bewijsstuk3.SetActive(true);
+    }
+    public void BS3Off()
+    {
+        Bewijsstuk3.SetActive(false);
+    }
+
+    public void BS4On()
+    {
+        Bewijsstuk4.SetActive(true);
+    }
+    public void BS4Off()
+    {
+        Bewijsstuk4.SetActive(false);
     }
 
 

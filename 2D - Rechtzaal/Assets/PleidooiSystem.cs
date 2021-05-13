@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 //public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST}
 
@@ -366,6 +367,7 @@ public class PleidooiSystem : MonoBehaviour
         dialogueText.text = "Dit was de eerste zitting";
         UI.GetuigenOff();
         yield return new WaitForSeconds(5f);
+        SceneManager.LoadScene("2e zitting");
     }
 
     IEnumerator PlayerTurn()
