@@ -1315,7 +1315,7 @@ public class DrieSystem : MonoBehaviour
         Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Chi Li te verhoren";
         yield return new WaitForSeconds(1f);
-        dialogueText.text = "Chi Li het woord is aan u";
+        dialogueText.text = "Chi Li het woord is aan u"; 
         yield return new WaitForSeconds(1f);
         textWolk.text = "Ik arriveerde ongeveer 5 min voordat de koks kwamen. Ik ging niet door de niet afgesloten deur naar binnen maar ik zag wel dat het licht in de keuken aan is. Ik besloot om meteen aan het werk te gaan en deed het deur naar het restaurantgedeelte van het slot, zette een decoratieboom buiten en ging mij opmaken in het toilet. Toen hoorde ik de koks binnenkomen en tegen elkaar zeggen dat de gokkast was opengebroken. Ik hoorde toen een van de koks heel hard gillen en besloot mij te verstoppen in de wc. Toen ik hoorde dat oma Zhang ‘neer ligt’ rende ik in paniek naar buiten en ging naar het huis van de eigenaar Zhang om op de kinderen te passen.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 2 damage. Dit is makkelijker dan dat gezeik via de prefab.
