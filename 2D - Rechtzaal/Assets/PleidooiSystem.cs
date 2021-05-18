@@ -362,10 +362,11 @@ public class PleidooiSystem : MonoBehaviour
 
     }
 
-    IEnumerator EndDag1()
+    IEnumerator EndDag1(int input)
     {
         dialogueText.text = "Dit was de eerste zitting";
         UI.GetuigenOff();
+        Score.HScore = input;
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("2e zitting");
     }
@@ -935,7 +936,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -958,7 +959,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         } else
             StartCoroutine(PlayerTurn());
     }
@@ -980,7 +981,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1003,7 +1004,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1026,7 +1027,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1049,7 +1050,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1072,7 +1073,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1095,7 +1096,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1118,7 +1119,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1141,7 +1142,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1164,7 +1165,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1187,7 +1188,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1210,7 +1211,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1233,7 +1234,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1256,7 +1257,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1279,7 +1280,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1302,7 +1303,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -1325,7 +1326,7 @@ public class PleidooiSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());

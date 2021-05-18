@@ -56,10 +56,11 @@ public class DrieSystem : MonoBehaviour
         enemyUnit = enemyGO.GetComponent<Unit>();
 
         dialogueText.text = "Welkom bij de derde zitting in de zaak: De zes van Breda" + "\r\n";
-        battleScore.SetSlider(playerUnit); // Dit is voor de void uit te oefenen
-
+         // Dit is voor de void uit te oefenen
+        
         yield return new WaitForSeconds(1f); //coroutine, 5 seconde delay 
-
+        playerUnit.score = Score.HScore;
+        battleScore.SetSlider(playerUnit);
         state = BattleState.PLAYERTURN; // verander state naar volgende
         StartCoroutine(PlayerTurn()); // functie PlayerTurn uitoefenen
     }

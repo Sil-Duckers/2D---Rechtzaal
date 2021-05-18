@@ -70,10 +70,11 @@ public class TweeSystem : MonoBehaviour
         enemyUnit = enemyGO.GetComponent<Unit>();
 
         dialogueText.text = "Welkom bij de tweede zitting in de zaak: De zes van Breda" + "\r\n";
-        battleScore.SetSlider(playerUnit); // Dit is voor de void uit te oefenen
+        
 
         yield return new WaitForSeconds(1f); //coroutine, 5 seconde delay 
-
+        playerUnit.score = Score.HScore;
+        battleScore.SetSlider(playerUnit);
         state = BattleState.PLAYERTURN; // verander state naar volgende
         StartCoroutine(PlayerTurn()); // functie PlayerTurn uitoefenen
     }
@@ -235,10 +236,11 @@ public class TweeSystem : MonoBehaviour
         
             }
 
-    IEnumerator EndDag1()
+    IEnumerator EndDag1(int input)
     {
         dialogueText.text = "Dit was de tweede zitting";
         UI.GetuigenOff();
+        Score.HScore = input;
         yield return new WaitForSeconds(5f);
         SceneManager.LoadScene("3e zitting");
     }
@@ -651,7 +653,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -674,7 +676,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -697,7 +699,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -720,7 +722,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -743,7 +745,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -766,7 +768,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -789,7 +791,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -813,7 +815,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -837,7 +839,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -861,7 +863,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -884,7 +886,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
@@ -907,7 +909,7 @@ public class TweeSystem : MonoBehaviour
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
-            StartCoroutine(EndDag1());
+            StartCoroutine(EndDag1(playerUnit.score));
         }
         else
             StartCoroutine(PlayerTurn());
