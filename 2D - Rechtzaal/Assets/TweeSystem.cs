@@ -266,9 +266,11 @@ public class TweeSystem : MonoBehaviour
             yield return new WaitForSeconds(1f);
             UI.ButtonOff();
             UI.ListOn();
-            
+            UI.GetuigenOff();
+
         } else if (G1 >= 0)
         {
+            UI.GetuigenOff();
             UI.ListOn();
         }
     }
@@ -635,7 +637,7 @@ public class TweeSystem : MonoBehaviour
     }
     
 
-    IEnumerator PlayerGetuigen1()
+    IEnumerator PlayerGetuigen6()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
@@ -658,7 +660,7 @@ public class TweeSystem : MonoBehaviour
         else
             StartCoroutine(PlayerTurn());
     }
-    IEnumerator PlayerGetuigen2()
+    IEnumerator PlayerGetuigen4()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
@@ -681,7 +683,7 @@ public class TweeSystem : MonoBehaviour
         else
             StartCoroutine(PlayerTurn());
     }
-    IEnumerator PlayerGetuigen3()
+    IEnumerator PlayerGetuigen5()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
@@ -704,7 +706,7 @@ public class TweeSystem : MonoBehaviour
         else
             StartCoroutine(PlayerTurn());
     }
-    IEnumerator PlayerGetuigen4()
+    IEnumerator PlayerGetuigen7()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
@@ -727,7 +729,7 @@ public class TweeSystem : MonoBehaviour
         else
             StartCoroutine(PlayerTurn());
     }
-    IEnumerator PlayerGetuigen5()
+    IEnumerator PlayerGetuigen8()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
@@ -750,7 +752,7 @@ public class TweeSystem : MonoBehaviour
         else
             StartCoroutine(PlayerTurn());
     }
-    IEnumerator PlayerGetuigen6()
+    IEnumerator PlayerGetuigen9()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
@@ -773,7 +775,7 @@ public class TweeSystem : MonoBehaviour
         else
             StartCoroutine(PlayerTurn());
     }
-    IEnumerator PlayerGetuigen7()
+    IEnumerator PlayerGetuigen10()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
@@ -797,7 +799,7 @@ public class TweeSystem : MonoBehaviour
             StartCoroutine(PlayerTurn());
 
     }
-    IEnumerator PlayerGetuigen8()
+    IEnumerator PlayerGetuigen11()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
@@ -821,7 +823,7 @@ public class TweeSystem : MonoBehaviour
             StartCoroutine(PlayerTurn());
 
     }
-    IEnumerator PlayerGetuigen9()
+    IEnumerator PlayerGetuigen12()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
@@ -845,7 +847,7 @@ public class TweeSystem : MonoBehaviour
             StartCoroutine(PlayerTurn());
 
     }
-    IEnumerator PlayerGetuigen10()
+    IEnumerator PlayerGetuigen1()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
@@ -868,7 +870,7 @@ public class TweeSystem : MonoBehaviour
         else
             StartCoroutine(PlayerTurn());
     }
-    IEnumerator PlayerGetuigen11()
+    IEnumerator PlayerGetuigen3()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
@@ -891,7 +893,7 @@ public class TweeSystem : MonoBehaviour
         else
             StartCoroutine(PlayerTurn());
     }
-    IEnumerator PlayerGetuigen12()
+    IEnumerator PlayerGetuigen2()
     {
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit

@@ -72,34 +72,34 @@ public class DrieSystem : MonoBehaviour
             dialogueText.text = playerUnit.unitName + "zegt " + "Het OM is er van overtuigd dat Ali, Abdoel, Aldo, Julia, Joyce en Clarissa daders zijn van de moord op oma Zhang.";
             yield return new WaitForSeconds(1f);
 
-            int isDead = playerUnit.TakeDamage(playerUnit.OP1A); // Start de TakeDamage funcite (aantal damage komt van player)
+            int isDead = playerUnit.TakeDamage(10); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
                         yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
-            Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
-            Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
-            Button3.text = "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
+            Button1.text = "Het dagboekfragment van Jennifer is vervalst en pleit niet voor Aldo’s alibi.";
+            Button2.text = "De verklaring van Annabel plaatst Abdoel in Sittard, terwijl meerdere getuigen verklaren dat hij in Breda was.";
+            Button3.text = "De brief van Ting bewijst dat Ali, Abdoel en Aldo aanwezig waren in Breda.";
             PT += 1;
         } else if (PT == 1)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
             yield return new WaitForSeconds(1f);
 
-            int isDead = playerUnit.TakeDamage(playerUnit.OP2A); // Start de TakeDamage funcite (aantal damage komt van player)
+            int isDead = playerUnit.TakeDamage(5); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
             yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
-            Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
-            Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
-            Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
+            Button1.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk. ";
+            Button2.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 5 jaar onvoorwaardelijk.";
+            Button3.text = "Daarom eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 2 jaar onvoorwaardelijk.";
             PT += 1;
         } else if (PT == 2)
         {
             dialogueText.text = playerUnit.unitName + "zegt " + "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             yield return new WaitForSeconds(1f);
 
-            int isDead = playerUnit.TakeDamage(playerUnit.OP3A); // Start de TakeDamage funcite (aantal damage komt van player)
+            int isDead = playerUnit.TakeDamage(0); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
             yield return new WaitForSeconds(1f);
@@ -126,15 +126,15 @@ public class DrieSystem : MonoBehaviour
             dialogueText.text = playerUnit.unitName + "zegt " + "Het OM is er van overtuigd dat Ali, Abdoel en Aldo daders zijn van de moord op oma Zhang en wij beschouwen Julia, Joyce en Clarissa als medeplichtige bij de moord op oma Zhang.";
             yield return new WaitForSeconds(1f);
 
-            int isDead = playerUnit.TakeDamage(playerUnit.OP1B); // Start de TakeDamage funcite (aantal damage komt van player)
+            int isDead = playerUnit.TakeDamage(5); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
             
             yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
-            Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
-            Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
-            Button3.text = "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
+            Button1.text = "Het dagboekfragment van Jennifer is vervalst en pleit niet voor Aldo’s alibi.";
+            Button2.text = "De verklaring van Annabel plaatst Abdoel in Sittard, terwijl meerdere getuigen verklaren dat hij in Breda was.";
+            Button3.text = "De brief van Ting bewijst dat Ali, Abdoel en Aldo aanwezig waren in Breda.";
             PT += 1;
         }
         else if (PT == 1)
@@ -142,15 +142,15 @@ public class DrieSystem : MonoBehaviour
             dialogueText.text = playerUnit.unitName + "zegt " + "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
             yield return new WaitForSeconds(1f);
 
-            int isDead = playerUnit.TakeDamage(playerUnit.OP2B); // Start de TakeDamage funcite (aantal damage komt van player)
+            int isDead = playerUnit.TakeDamage(10); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
             
             yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
-            Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
-            Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
-            Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
+            Button1.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk. ";
+            Button2.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 5 jaar onvoorwaardelijk.";
+            Button3.text = "Daarom eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 2 jaar onvoorwaardelijk.";
             PT += 1;
         }
         else if (PT == 2)
@@ -158,7 +158,7 @@ public class DrieSystem : MonoBehaviour
             dialogueText.text = playerUnit.unitName + "zegt " + "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
             yield return new WaitForSeconds(1f);
 
-            int isDead = playerUnit.TakeDamage(playerUnit.OP3B); // Start de TakeDamage funcite (aantal damage komt van player)
+            int isDead = playerUnit.TakeDamage(0); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
             
@@ -181,14 +181,14 @@ public class DrieSystem : MonoBehaviour
             dialogueText.text = playerUnit.unitName + "zegt " + "Het OM is er van overtuigd dat Ali, Abdoel, Aldo, Julia, Joyce en Clarissa onschuldig zijn. ";
             yield return new WaitForSeconds(1f);
 
-            int isDead = playerUnit.TakeDamage(playerUnit.OP1C); // Start de TakeDamage funcite (aantal damage komt van player)
+            int isDead = playerUnit.TakeDamage(5); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
            
             yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
-            Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
-            Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
-            Button3.text = "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
+            Button1.text = "Het dagboekfragment van Jennifer is vervalst en pleit niet voor Aldo’s alibi.";
+            Button2.text = "De verklaring van Annabel plaatst Abdoel in Sittard, terwijl meerdere getuigen verklaren dat hij in Breda was.";
+            Button3.text = "De brief van Ting bewijst dat Ali, Abdoel en Aldo aanwezig waren in Breda.";
             PT += 1;
         }
         else if (PT == 1)
@@ -196,15 +196,15 @@ public class DrieSystem : MonoBehaviour
             dialogueText.text = playerUnit.unitName + "zegt " + "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
             yield return new WaitForSeconds(1f);
 
-            int isDead = playerUnit.TakeDamage(playerUnit.OP2C); // Start de TakeDamage funcite (aantal damage komt van player)
+            int isDead = playerUnit.TakeDamage(0); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
             
             yield return new WaitForSeconds(1f);
             dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
-            Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
-            Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
-            Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
+            Button1.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk. ";
+            Button2.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 5 jaar onvoorwaardelijk.";
+            Button3.text = "Daarom eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 2 jaar onvoorwaardelijk.";
             PT += 1;
         }
         else if (PT == 2)
@@ -212,7 +212,7 @@ public class DrieSystem : MonoBehaviour
             dialogueText.text = playerUnit.unitName + "zegt " + "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
             yield return new WaitForSeconds(1f);
 
-            int isDead = playerUnit.TakeDamage(playerUnit.OP3C); // Start de TakeDamage funcite (aantal damage komt van player)
+            int isDead = playerUnit.TakeDamage(10); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
             
             yield return new WaitForSeconds(1f);
@@ -234,13 +234,13 @@ public class DrieSystem : MonoBehaviour
             dialogueText.text = enemyUnit.unitName + " verteld zijn slotpleidooi."; // Aangeven van aanval
             yield return new WaitForSeconds(1f);
 
-            dialogueText.text = enemyUnit.unitName + "zegt " + "Mijn cliënten zijn onschuldig";
+            dialogueText.text = enemyUnit.unitName + "Geachte Hof, mijn cliënten zijn onschuldig. Dit redeneren wij op basis van verklaringen en sporenonderzoek. " + "Mijn cliënten zijn onschuldig";
             yield return new WaitForSeconds(1f);
 
-            dialogueText.text = enemyUnit.unitName + "zegt " + "Het sporenonderzoek van de politie laat geen relatie zien tussen mijn cliënten en de moord op oma Zhang.";
+            dialogueText.text = enemyUnit.unitName + "De verklaringen van Jennifer en Annabel bevestigen duidelijk dat geen van mijn cliënten in Breda waren op het moment van deze afgrijselijke moord. " + "Het sporenonderzoek van de politie laat geen relatie zien tussen mijn cliënten en de moord op oma Zhang.";
             yield return new WaitForSeconds(1f);
 
-            dialogueText.text = enemyUnit.unitName + "zegt " + "De verklaring van Annabel plaats mijn cliënten niet op de plaats en tijd van de moord, dus zij kunnen het niet gedaan hebben.";
+            dialogueText.text = enemyUnit.unitName + "Het sporenonderzoek van Mw. Evers laat zien dat er absoluut geen relatie is tussen de gevonden sporen op het plaats delict en mijn cliënten, zij zijn onschuldig. " + "De verklaring van Annabel plaats mijn cliënten niet op de plaats en tijd van de moord, dus zij kunnen het niet gedaan hebben.";
             yield return new WaitForSeconds(1f);
 
 
@@ -333,10 +333,10 @@ public class DrieSystem : MonoBehaviour
 
     IEnumerator PlayerTurn()
     {
-            dialogueText.text = "Het is tijd voor het slot van het OM" + "\r\n" + "Kies een slotspleidooi";
-            Button1.text = "Het OM is er van overtuigd dat Ali, Abdoel, Aldo, Julia, Joyce en Clarissa daders zijn van de moord op oma Zhang.";
-            Button2.text = "Het OM is er van overtuigd dat Ali, Abdoel en Aldo daders zijn van de moord op oma Zhang en wij beschouwen Julia, Joyce en Clarissa als medeplichtige bij de moord op oma Zhang.";
-            Button3.text = "Het OM is er van overtuigd dat Ali, Abdoel, Aldo, Julia, Joyce en Clarissa onschuldig zijn. ";
+            dialogueText.text = "Het is tijd voor het slot van het OM" + "\r\n" + "Kies een slotpleidooi";
+            Button1.text = "De verklaringen van Joyce, Clarissa en Julia bevestigen dat de meisjes geen actieve rol in de moord hebben gespeeld maar alleen medeplichtig zijn.";
+            Button2.text = "De verklaringen van Mw. Boonstra plaatst de verdachten allemaal rond het tijdstip van de moord in Breda.";
+            Button3.text = "De verklaringen van koks van Golden Garden bevestigd onze verdenkingen.";
         yield return new WaitForSeconds(1f);
             // Vanuit hier ga je dus naar de player attack als je op de knop drukt
     }

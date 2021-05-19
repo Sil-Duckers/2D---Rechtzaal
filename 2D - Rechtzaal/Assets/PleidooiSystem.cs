@@ -80,22 +80,22 @@ public class PleidooiSystem : MonoBehaviour
         yield return new WaitForSeconds(1f); //coroutine, 5 seconde delay 
 
         dialogueText.text = "Op 4 juli 1993, omstreeks 11.00 uur, werd in de keuken van het Chinees-Indisch restaurant [Golden Garden], gevestigd te Breda, het stoffelijk overschot aangetroffen van de 56-jarige [mw. Zhang], de moeder van de eigenaar van dat restaurant. Zij bleek door geweld om het leven te zijn gebracht.";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
 
         dialogueText.text = "Voor deze moord klaagt de Bredase Rechtbank Aldo, Abdoel, Ali, Joyce, Julia en Clarissa aan. Wij verdenken hen van het plegen van deze moord op basis van het CID rapport.";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
 
         dialogueText.text = "Julia heeft begin 1993 op de uitkijk gestaan bij een inbraak en overval op een Chinese vrouw uit Sittard. De Chinese vrouw is hierbij door de daders vermoord.";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
 
         dialogueText.text = "Abdoel, Aldo en anderen zijn de daders van de moord op de Chinese vrouw.";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
 
         dialogueText.text = "Abdoel, Julia, Mandy en anderen hebben zich in 1993 in Sittard schuldig gemaakt aan diverse winkeldiefstallen, inbraken, berovingen en andere vermogensmisdrijven waarbij in een aantal gevallen de slachtoffers zijn bedreigd met een vuurwapen.";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(5f);
 
         dialogueText.text = "Abdoel, Karim en anderen houden zich bezig met de smokkel van cocaïne vanuit Nederland naar Frankrijk.";
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3f);
 
         state = BattleState.PLAYERTURN; // verander state naar volgende
         StartCoroutine(PlayerTurn()); // functie PlayerTurn uitoefenen
