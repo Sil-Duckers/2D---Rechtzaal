@@ -130,7 +130,7 @@ public class DrieSystem : MonoBehaviour
             PT += 1;
 
             state = BattleState.ENEMYTURN;
-            StartCoroutine(EndDag1());
+            StartCoroutine(EnemyTurn());
         }
         /* else if (PT == 3)
         {
@@ -190,7 +190,7 @@ public class DrieSystem : MonoBehaviour
             PT += 1;
 
             state = BattleState.ENEMYTURN;
-            StartCoroutine(EndDag1());
+            StartCoroutine(EnemyTurn());
         } 
 
     }
@@ -243,7 +243,7 @@ public class DrieSystem : MonoBehaviour
             PT += 1;
 
             state = BattleState.ENEMYTURN;
-            StartCoroutine(EndDag1());
+            StartCoroutine(EnemyTurn());
         } 
     }
     
@@ -269,6 +269,8 @@ public class DrieSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score); //playerHUD.SetHP, slider verzetten
             yield return new WaitForSeconds(1f);
             PT = 4;
+            StartCoroutine(EndDag1());
+
 
             /*
             dialogueText.text = "De advocaat van de verdachte mag nu drie getuigen oproepen";
@@ -342,10 +344,11 @@ public class DrieSystem : MonoBehaviour
     IEnumerator EndDag1()
     {
         UI.GetuigenOff();
-        UI.DialogueOff();
+        
         dialogueText.text = "Het is nu tijd voor het eindvonnis";
         yield return new WaitForSeconds(5f);
-
+        UI.DialogueOff();
+        UI.ButtonOff();
         if (playerUnit.score < 50)
         {
             SchermLost.SetActive(true);
