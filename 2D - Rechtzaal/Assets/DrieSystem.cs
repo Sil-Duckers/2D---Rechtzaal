@@ -75,7 +75,7 @@ public class DrieSystem : MonoBehaviour
             int isDead = playerUnit.TakeDamage(10); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
                         yield return new WaitForSeconds(1f);
-            dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het slotpleidooi.";
             Button1.text = "Het dagboekfragment van Jennifer is vervalst en pleit niet voor Aldo’s alibi.";
             Button2.text = "De verklaring van Annabel plaatst Abdoel in Sittard, terwijl meerdere getuigen verklaren dat hij in Breda was.";
             Button3.text = "De brief van Ting bewijst dat Ali, Abdoel en Aldo aanwezig waren in Breda.";
@@ -89,7 +89,7 @@ public class DrieSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score);
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het slotpleidooi.";
             Button1.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk. ";
             Button2.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 5 jaar onvoorwaardelijk.";
             Button3.text = "Daarom eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 2 jaar onvoorwaardelijk.";
@@ -103,7 +103,7 @@ public class DrieSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score);
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Dit was het starpleidooi.";
+            dialogueText.text = "Dit was het Slotpleidooi.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
@@ -131,7 +131,7 @@ public class DrieSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het slotpleidooi.";
             Button1.text = "Het dagboekfragment van Jennifer is vervalst en pleit niet voor Aldo’s alibi.";
             Button2.text = "De verklaring van Annabel plaatst Abdoel in Sittard, terwijl meerdere getuigen verklaren dat hij in Breda was.";
             Button3.text = "De brief van Ting bewijst dat Ali, Abdoel en Aldo aanwezig waren in Breda.";
@@ -147,7 +147,7 @@ public class DrieSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het slotpleidooi.";
             Button1.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk. ";
             Button2.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 5 jaar onvoorwaardelijk.";
             Button3.text = "Daarom eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 2 jaar onvoorwaardelijk.";
@@ -163,7 +163,7 @@ public class DrieSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Dit was het starpleidooi.";
+            dialogueText.text = "Dit was het slotpleidooi.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
@@ -185,7 +185,7 @@ public class DrieSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score);
            
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het slotpleidooi.";
             Button1.text = "Het dagboekfragment van Jennifer is vervalst en pleit niet voor Aldo’s alibi.";
             Button2.text = "De verklaring van Annabel plaatst Abdoel in Sittard, terwijl meerdere getuigen verklaren dat hij in Breda was.";
             Button3.text = "De brief van Ting bewijst dat Ali, Abdoel en Aldo aanwezig waren in Breda.";
@@ -201,7 +201,7 @@ public class DrieSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Kies het volgende gedeelte van het starpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het slotpleidooi.";
             Button1.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk. ";
             Button2.text = "Daarom eist het OM voor alle verdachten een gevangenisstraf van ten minste 5 jaar onvoorwaardelijk.";
             Button3.text = "Daarom eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 10 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 2 jaar onvoorwaardelijk.";
