@@ -125,7 +125,7 @@ public class PleidooiSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score);
             
             yield return new WaitForSeconds(10f);
-            dialogueText.text = "Kies het volgende gedeelte van het startpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooien.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
             Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
@@ -139,7 +139,7 @@ public class PleidooiSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score);
             
             yield return new WaitForSeconds(10f);
-            dialogueText.text = "Dit was het startpleidooi.";
+            dialogueText.text = "Dit was het openingspleidooien.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
@@ -167,7 +167,7 @@ public class PleidooiSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(10f);
-            dialogueText.text = "Kies het volgende gedeelte van het startpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooien.";
             Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
             Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
             Button3.text = "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
@@ -183,7 +183,7 @@ public class PleidooiSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(10f);
-            dialogueText.text = "Kies het volgende gedeelte van het startpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooien.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
             Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
@@ -199,7 +199,7 @@ public class PleidooiSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(10f);
-            dialogueText.text = "Dit was het startpleidooi.";
+            dialogueText.text = "Dit was het openingspleidooien.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
@@ -225,7 +225,7 @@ public class PleidooiSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score);
            
             yield return new WaitForSeconds(10f);
-            dialogueText.text = "Kies het volgende gedeelte van het startpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooien.";
             Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
             Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
             Button3.text = "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
@@ -241,7 +241,7 @@ public class PleidooiSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(10f);
-            dialogueText.text = "Kies het volgende gedeelte van het startpleidooi.";
+            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooien.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
             Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
@@ -256,7 +256,7 @@ public class PleidooiSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score);
             
             yield return new WaitForSeconds(10f);
-            dialogueText.text = "Dit was het startpleidooi.";
+            dialogueText.text = "Dit was het openingspleidooien.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
@@ -275,7 +275,7 @@ public class PleidooiSystem : MonoBehaviour
     {
         if (PT == 3)
         {
-            dialogueText.text = enemyUnit.unitName + " verteld zijn startpleidooi."; // Aangeven van aanval
+            dialogueText.text = enemyUnit.unitName + " verteld zijn openingspleidooien."; // Aangeven van aanval
             yield return new WaitForSeconds(5f);
 
             dialogueText.text = enemyUnit.unitName +"zegt "+ "Mijn cliënten zijn onschuldig";
