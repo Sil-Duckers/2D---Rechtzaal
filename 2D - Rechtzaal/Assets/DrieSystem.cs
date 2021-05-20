@@ -362,7 +362,7 @@ public class DrieSystem : MonoBehaviour
 
     IEnumerator PlayerTurn()
     {
-            dialogueText.text = "Het is tijd voor het slot van het OM" + "\r\n" + "Kies een slotpleidooi";
+            dialogueText.text = "Het is tijd voor het slotpleidooi van het OM" + "\r\n" + "Kies een slotpleidooi";
             Button1.text = "De verklaringen van Joyce, Clarissa en Julia bevestigen dat de meisjes geen actieve rol in de moord hebben gespeeld maar alleen medeplichtig zijn.";
             Button2.text = "De verklaringen van Mw. Boonstra plaatst de verdachten allemaal rond het tijdstip van de moord in Breda.";
             Button3.text = "De verklaringen van koks van Golden Garden bevestigd onze verdenkingen.";
