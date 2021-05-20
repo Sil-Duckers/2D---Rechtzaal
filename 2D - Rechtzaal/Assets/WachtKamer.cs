@@ -62,7 +62,7 @@ public class WachtKamer : MonoBehaviour
         scherm3.SetActive(false);
         scherm4.SetActive(false);
         scherm2.SetActive(true);
-        StartCoroutine(Schermen());
+        //StartCoroutine(Schermen());
     }
 
 

@@ -3236,18 +3236,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 4871129117986201745, guid: 580f1e1ce4905994ba919157be43c0c6, type: 3}
   enemyPrefab: {fileID: 7327600671766224099, guid: 6b6b5306d0ac74f4eb5351e4a6c52723, type: 3}
-  GPrefab1: {fileID: 5698944256834242068, guid: 767225b6a75c40c429293f99c08670f6, type: 3}
-  GPrefab2: {fileID: 5779976645950288314, guid: 246d8c91fb7323d42ada302e43d4be80, type: 3}
-  GPrefab3: {fileID: 1554423148615427467, guid: 042be2780725c414bad010bab91d39a6, type: 3}
-  GPrefab4: {fileID: 5782118126598548366, guid: 1091b2d215e936b488e90df147eab044, type: 3}
-  GPrefab5: {fileID: 7880619551965611616, guid: 596b978a2dbdf344eb852555153e0a67, type: 3}
-  GPrefab6: {fileID: 930392104342131299, guid: 762e91ae42a6c354ca939cb067943d98, type: 3}
-  GPrefab7: {fileID: 8752168369397345036, guid: b68b17b63287f7f409cdfa12746c9d86, type: 3}
-  GPrefab8: {fileID: 4864359476384738838, guid: 7bd535eb7d76eab4498c802b3977d5ec, type: 3}
-  GPrefab9: {fileID: 6175301331511502733, guid: bca2dfc9141125341ac41870be4568ae, type: 3}
-  GPrefab10: {fileID: 5813890042985283468, guid: a7135f2eef2028345b506859ee9faa58, type: 3}
-  GPrefab11: {fileID: 7986316713196654602, guid: bc59476841d077747831c19ed9f04aa2, type: 3}
-  GPrefab12: {fileID: 5043297112729875902, guid: 2696c69613a54b64b8edaf3486e17322, type: 3}
+  GPrefab1: {fileID: 7327600671766224099, guid: dadade14583abcd48a26ebf83d2d80ea, type: 3}
+  GPrefab2: {fileID: 7327600671766224099, guid: 7c02b114c59147d4c991ec4145e07ffd, type: 3}
+  GPrefab3: {fileID: 7327600671766224099, guid: 632a9ad84c619a9449a54180f7d6ecba, type: 3}
+  GPrefab4: {fileID: 7327600671766224099, guid: 3c5c4d1572280c240883749dbcfafe97, type: 3}
+  GPrefab5: {fileID: 7327600671766224099, guid: 1502df392ea6da147899bc7d3c346c25, type: 3}
+  GPrefab6: {fileID: 7327600671766224099, guid: 9c3ca28c94e6ede4aba57b2bb078bffb, type: 3}
+  GPrefab7: {fileID: 7327600671766224099, guid: f2292a96ef2222c41853eb36d1fc2788, type: 3}
+  GPrefab8: {fileID: 7327600671766224099, guid: e9086faa5e35d504e82f42cb48f9abf0, type: 3}
+  GPrefab9: {fileID: 7327600671766224099, guid: 2476261bb90e54e4db9057a1f29ccdf9, type: 3}
+  GPrefab10: {fileID: 7327600671766224099, guid: 3ccc651f42ddc33428fec55eda44ea4e, type: 3}
+  GPrefab11: {fileID: 7327600671766224099, guid: ed104e606d3fbf94c89ef5ad777a9c70, type: 3}
+  GPrefab12: {fileID: 7327600671766224099, guid: 310312152a52b7b44ba7034f7c598f5c, type: 3}
   Scherm: {fileID: 1348633433}
   playerBattleStation: {fileID: 675398942}
   enemyBattleStation: {fileID: 69700195}

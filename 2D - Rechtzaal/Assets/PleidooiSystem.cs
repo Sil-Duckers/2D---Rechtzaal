@@ -125,7 +125,7 @@ public class PleidooiSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score);
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooien.";
+            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooi.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
             Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
@@ -139,7 +139,7 @@ public class PleidooiSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score);
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Dit was het openingspleidooien.";
+            dialogueText.text = "Dit was het openingspleidooi.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
@@ -148,11 +148,11 @@ public class PleidooiSystem : MonoBehaviour
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
         }
-        /* else if (PT == 3)
+        else if (PT >= 3)
         {
-            state = BattleState.ENEMYTURN;
+            PT = 3;
             StartCoroutine(EnemyTurn());
-        }*/
+        }
     }
     IEnumerator PlayerAttack2()
     {   // Aanval 2
@@ -167,7 +167,7 @@ public class PleidooiSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooien.";
+            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooi.";
             Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
             Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
             Button3.text = "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
@@ -183,7 +183,7 @@ public class PleidooiSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooien.";
+            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooi.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
             Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
@@ -199,7 +199,7 @@ public class PleidooiSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Dit was het openingspleidooien.";
+            dialogueText.text = "Dit was het openingspleidooi.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
@@ -207,11 +207,12 @@ public class PleidooiSystem : MonoBehaviour
 
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
-        } /* else if (PT == 3)
+        }
+        else if (PT >= 3)
         {
-            state = BattleState.ENEMYTURN;
+            PT = 3;
             StartCoroutine(EnemyTurn());
-        }*/
+        }
 
     }
     IEnumerator PlayerAttack3()
@@ -225,7 +226,7 @@ public class PleidooiSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score);
            
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooien.";
+            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooi.";
             Button1.text = "Op basis van het verhaal van de patholoog-anatoom en de recherches …";
             Button2.text = "Op basis van het verhaal van Mw. Boonstra en het dagboekfragment van Jennifer … ";
             Button3.text = "Op basis van de verklaringen van Joyce, Clarissa en Julia …";
@@ -241,7 +242,7 @@ public class PleidooiSystem : MonoBehaviour
             
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooien.";
+            dialogueText.text = "Kies het volgende gedeelte van het openingspleidooi.";
             Button1.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk.";
             Button2.text = "en op basis van de huidige wetboeken eist het OM voor alle verdachten een gevangenisstraf van ten minste 10 jaar voorwaardelijk.";
             Button3.text = "en op basis van de huidige wetboeken eist het OM voor Ali, Abdoel en Aldo een gevangenisstraf van ten minste 15 jaar onvoorwaardelijk en voor Julia, Joyce en Clarissa eist het OM ten minste 5 jaar onvoorwaardelijk.";
@@ -256,19 +257,19 @@ public class PleidooiSystem : MonoBehaviour
             battleScore.SetScore(playerUnit.score);
             
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Dit was het openingspleidooien.";
+            dialogueText.text = "Dit was het openingspleidooi.";
             Button1.text = "";
             Button2.text = "";
             Button3.text = "";
             PT += 1;
             state = BattleState.ENEMYTURN;
             StartCoroutine(EnemyTurn());
-        } /* else if (PT == 3)
+        } 
+        else if (PT >= 3)
         {
-            state = BattleState.ENEMYTURN;
+            PT = 3;
             StartCoroutine(EnemyTurn());
         }
-        */
     }
     
     IEnumerator EnemyTurn()
@@ -379,6 +380,7 @@ public class PleidooiSystem : MonoBehaviour
         
      if (PT == 0)
         {
+            UI.ButtonOn();
             dialogueText.text = "Het is tijd voor het openingspleidooi van het OM" + "\r\n" + "Kies een openingspleidooi";
             Button1.text = "Het OM is er van overtuigd dat Ali, Abdoel, Aldo, Julia, Joyce en Clarissa daders zijn van de moord op oma Zhang.";
             Button2.text = "Het OM is er van overtuigd dat Ali, Abdoel en Aldo daders zijn van de moord op oma Zhang en wij beschouwen Julia, Joyce en Clarissa als medeplichtige bij de moord op oma Zhang.";

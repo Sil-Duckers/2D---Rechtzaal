@@ -82,7 +82,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Welkom bij de tweede zitting in de zaak: De zes van Breda" + "\r\n";
         
 
-        yield return new WaitForSeconds(5f); //coroutine, 5 seconde delay 
+        yield return new WaitForSeconds(4f); //coroutine, 5 seconde delay 
         playerUnit.score = Score.HScore;
         battleScore.SetSlider(playerUnit);
         state = BattleState.PLAYERTURN; // verander state naar volgende
@@ -93,19 +93,19 @@ public class TweeSystem : MonoBehaviour
     {   // Aanval 1
         if (PT == 0)
        {
-            dialogueText.text = playerUnit.unitName + "wilt graag bewijsstuk 1 (Het Dagboek van Jennifer) inzien.";
-            yield return new WaitForSeconds(10f);
+            dialogueText.text = playerUnit.unitName + " wilt graag bewijsstuk 1 (Het Dagboek van Jennifer) inzien.";
+            yield return new WaitForSeconds(2f);
             UI.BS1On();
             UI.DialogueOff();
             UI.ButtonOff();
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(14f);
             UI.BS1Off();
             UI.DialogueOn();
             UI.ButtonOn();
             int isDead = playerUnit.TakeDamage(5); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
-            yield return new WaitForSeconds(10f);
-            dialogueText.text = "De advocaat van de verdachte mag nu drie getuigen oproepen."; 
+            yield return new WaitForSeconds(2f);
+            dialogueText.text = "De advocaat van de verdachten mag nu drie getuigen oproepen."; 
             PT = 4;
 
             state = BattleState.ENEMYTURN;
@@ -117,19 +117,19 @@ public class TweeSystem : MonoBehaviour
 
         if (PT == 0)
         {
-            dialogueText.text = playerUnit.unitName + "wilt graag bewijsstuk 2 (Brief Ting) inzien. ";
-            yield return new WaitForSeconds(10f);
+            dialogueText.text = playerUnit.unitName + " wilt graag bewijsstuk 2 (Brief Ting) inzien. ";
+            yield return new WaitForSeconds(2f);
             UI.BS2On();
             UI.DialogueOff();
             UI.ButtonOff();
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(14f);
             UI.BS2Off();
             UI.DialogueOn();
             UI.ButtonOn();
             int isDead = playerUnit.TakeDamage(-5); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
-            yield return new WaitForSeconds(10f);
-            dialogueText.text = "De advocaat van de verdachte mag nu drie getuigen oproepen.";
+            yield return new WaitForSeconds(2f);
+            dialogueText.text = "De advocaat van de verdachten mag nu drie getuigen oproepen.";
             PT = 4;
 
             state = BattleState.ENEMYTURN;
@@ -141,19 +141,19 @@ public class TweeSystem : MonoBehaviour
     {   // Aanval 3
         if (PT == 0)
         {
-            dialogueText.text = playerUnit.unitName + "wilt graag bewijsstuk 3 (Reconstructie) inzien.";
-            yield return new WaitForSeconds(10f);
+            dialogueText.text = playerUnit.unitName + " wilt graag bewijsstuk 3 (Reconstructie) inzien.";
+            yield return new WaitForSeconds(2f);
             UI.BS3On();
             UI.DialogueOff();
             UI.ButtonOff();
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(14f);
             UI.BS3Off();
             UI.DialogueOn();
             UI.ButtonOn();
             int isDead = playerUnit.TakeDamage(0); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
-            yield return new WaitForSeconds(10f);
-            dialogueText.text = "De advocaat van de verdachte mag nu drie getuigen oproepen.";
+            yield return new WaitForSeconds(2f);
+            dialogueText.text = "De advocaat van de verdachten mag nu drie getuigen oproepen.";
             PT = 4;
 
             state = BattleState.ENEMYTURN;
@@ -164,19 +164,19 @@ public class TweeSystem : MonoBehaviour
     {   // Aanval 3
         if (PT == 0)
         {
-            dialogueText.text = playerUnit.unitName + "wilt graag bewijsstuk 4 (Relatie Tree) inzien.";
-            yield return new WaitForSeconds(10f);
+            dialogueText.text = playerUnit.unitName + " wilt graag bewijsstuk 4 (Relatie Tree) inzien.";
+            yield return new WaitForSeconds(2f);
             UI.BS4On();
             UI.DialogueOff();
             UI.ButtonOff();
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(14f);
             UI.BS4Off();
             UI.DialogueOn();
             UI.ButtonOn();
             int isDead = playerUnit.TakeDamage(5); // Start de TakeDamage funcite (aantal damage komt van player)
             battleScore.SetScore(playerUnit.score);
-            yield return new WaitForSeconds(10f);
-            dialogueText.text = "De advocaat van de verdachte mag nu drie getuigen oproepen.";
+            yield return new WaitForSeconds(2f);
+            dialogueText.text = "De advocaat van de verdachten mag nu drie getuigen oproepen.";
             PT = 4;
 
             state = BattleState.ENEMYTURN;
@@ -187,59 +187,65 @@ public class TweeSystem : MonoBehaviour
     IEnumerator EnemyTurn()
     {
          
-            yield return new WaitForSeconds(10f);
 
-            dialogueText.text = "De advocaat van de verdachte mag nu drie getuigen oproepen";
-            yield return new WaitForSeconds(10f);
-
+            yield return new WaitForSeconds(2f);
 
             UI.ButtonOff();
-            UI.GetuigenOn();
+            UI.GetuigenOff();
             // Getuigen 1 --------------------------------------------------------------------
-            yield return new WaitForSeconds(10f);
+            //yield return new WaitForSeconds(10f);
             GameObject GE1 = Instantiate(GPrefab2, GetuigenBattleStation); // Klopt nog niet
             dialogueText.text = playerUnit.unitName + " kiest om Aldo te verhoren"; //hier moet de naam nog bij
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(2f);
             dialogueText.text = "Aldo het woord is aan u"; // idem
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(2f);
+            UI.GetuigenOn();
             textWolk.text = "Ik ben onschuldig, ik was uit met Jennifer en haar vriendin."; // hier komt zijn verhaal
             playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
             battleScore.SetScore(playerUnit.score); // update de slider
+            yield return new WaitForSeconds(4f);
             dialogueText.text = "Bedankt Aldo"; // update
+            UI.GetuigenOff();
             Destroy(GE1); 
 
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(2f);
 
 
             // Getuigen 2 --------------------------------------------------------------------
             dialogueText.text = "De advocaat van de verdachte mag nu een tweede getuigen oproepen";
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(2f);
             GameObject GE2 = Instantiate(GPrefab11, GetuigenBattleStation); // Klopt nog niet
             dialogueText.text = playerUnit.unitName + " kiest om Linda te verhoren"; //hier moet de naam nog bij
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(2f);
             dialogueText.text = "Linda het woord is aan u"; // idem
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(2f);
+            UI.GetuigenOn();
             textWolk.text = "Ik was erbij toen Joyce werd bedreigd met een pistool door Abdoel, maar dit was niet op maandag 5 juli. Het was sowieso op een andere dag. Joyce is wel vaker bedreigd door de jongens. Ik heb het meerdere keren meegemaakt en een keer hadden de jongens zich opgesloten in Joyce’s kamer en toen gingen ze haar spullen kapot maken. Ze gooiden haar ruiten in en schreven het woord stinkdier op de muren. Uiteindelijk is ze maar verhuist. Julia en de jongens hebben altijd ruzie. Ze komt alleen naar ons huis als ze Mandy bezoekt. Ik denk wel dat Julia een oogje heeft op Abdoel, al snap ik niet waarom. Joyce is bij niemand echt geliefd. We hebben ook een keer met de meiden tegen de huisbaas gezegd dat ze soms liegt."; // hier komt zijn verhaal
             playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
             battleScore.SetScore(playerUnit.score); // update de slider
+            yield return new WaitForSeconds(10f);
             dialogueText.text = "Bedankt Linda"; // update
             Destroy(GE2);
-            yield return new WaitForSeconds(3f);
+            UI.GetuigenOff();
+            yield return new WaitForSeconds(2f);
 
             // Getuigen 3--------------------------------------------------------------------
             dialogueText.text = "De advocaat van de verdachte mag nu de derde getuigen oproepen";
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(2f);
             GameObject GE3 = Instantiate(GPrefab7, GetuigenBattleStation); // Klopt nog niet
             dialogueText.text = playerUnit.unitName + " kiest om MW. Vermeulen te verhoren"; //hier moet de naam nog bij
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(2f);
             dialogueText.text = "MW. Vermeulen het woord is aan u"; // idem
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(2f);
+            UI.GetuigenOn();
             textWolk.text = "De tijd van deze ernstige mishandeling lag tussen 4:15 en 5:00. Het tijdstip van overleden ligt tussen acht uren en vier uren voorafgaande aan het tijdstip van mijn onderzoek om 12:15. Ik heb toen ook vastgesteld dat de dood een niet-natuurlijke oorzaak had."; // hier komt zijn verhaal
             playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
             battleScore.SetScore(playerUnit.score); // update de slider
+            yield return new WaitForSeconds(6f);
             dialogueText.text = "Bedankt MW. Vermeulen"; // update
             Destroy(GE3);
-            yield return new WaitForSeconds(3f);
+            UI.GetuigenOff();
+            yield return new WaitForSeconds(2f);
 
             state = BattleState.PLAYERTURN;
             StartCoroutine(PlayerTurn());
@@ -261,7 +267,7 @@ public class TweeSystem : MonoBehaviour
      if (PT == 0)
         {
             dialogueText.text = "Je mag nu één bewijsstuk kiezen";
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(1f);
             Button1.text = "Het dagboek van Jennifer";
             Button2.text = "De brief van Ting";
             Button3.text = "Reconstructie";
@@ -273,7 +279,7 @@ public class TweeSystem : MonoBehaviour
                 Button2.text = "";
                 Button3.text = "";
             dialogueText.text = "Roep nu uw getuigen op";
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(2f);
             UI.ButtonOff();
             UI.ListOn();
             UI.GetuigenOff();
@@ -649,19 +655,22 @@ public class TweeSystem : MonoBehaviour
 
     IEnumerator PlayerGetuigen6()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab6, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Joyce te verhoren";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         dialogueText.text = " Joyce het woord is aan u";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
         textWolk.text = " Ik ben op maandagavond 5 juli 1993 bedreigd door Ali, Aldo en Abdoel. Ze hebben mij heel erg duidelijk gemaakt dat ik mijn mond moest houden over wat ik had gezien bij Golden Garden. Abdoel trok een wapen, ik schrok me dood. Er zijn al sinds het begin problemen tussen de jongens en mij. Ze drongen mijn kamer binnen en namen spullen of geld mee. Elke keer heb ik aangifte hiervan gedaan bij de politie. Nadat de jongens een keer mijn hele kamer kort en klein hadden geslagen, ben ik verhuisd. Ik denk dat Julie de jongens heeft geholpen om mij uit mijn kamer te zetten. Toen ik verhuisde naar een andere woning op de Oudeweg, toen vonden de jongens mij weer. Clarissa had namelijk het adres doorgegeven.";
         playerUnit.TakeDamage(10); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(10f);
         dialogueText.text = "Bedankt Joyce";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -672,19 +681,22 @@ public class TweeSystem : MonoBehaviour
     }
     IEnumerator PlayerGetuigen4()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab4, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Clarissa te verhoren";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         dialogueText.text = "Mw Huang het woord is aan u";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
         textWolk.text = " De jongens die vaak langskomen bij ons op de Oudeweg hebben de boel helemaal verziekt. Ze hebben zelf op Linda en Mandy geschoten en de spullen van Joyce kapot gemaakt! Ik heb nooit echt een gelijkwaardige vriendschap met Joyce gehad. Ik durfde niets te zeggen tegen Joyce, laat staan haar tegen praten. Ze is nogal moeilijk te ontwijken. Joyce praat wel vaker niet de waarheid en dat hebben we ook tegen de huisbaas gezegd om te laten weten wat er aan de hand is.";
         playerUnit.TakeDamage(10); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(8f);
         dialogueText.text = "Bedankt Clarissa";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -695,19 +707,22 @@ public class TweeSystem : MonoBehaviour
     }
     IEnumerator PlayerGetuigen5()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab5, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Julia te verhoren";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         dialogueText.text = "Julia het woord is aan u";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
         textWolk.text = "Wat er allemaal op de Oudeweg is gebeurd is voor mij echt het meest schokkende wat ik ooit heb meegemaakt. Ik denk dat de andere meiden echt door het huis zijn gecommandeerd door Aldo, Ali. Abdoel deed niks, hij gedraagt zich gewoon.";
         playerUnit.TakeDamage(7); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(6f);
         dialogueText.text = "Bedankt Julia";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -718,19 +733,22 @@ public class TweeSystem : MonoBehaviour
     }
     IEnumerator PlayerGetuigen12()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab12, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Davey Kok te verhoren";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         dialogueText.text = "Davey Kok het woord is aan u";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
         textWolk.text = "Soms als de jongens langs kwamen op de Oudeweg, dan terroriseerde de 3 jongens de meisjes. Ik heb ook het idee dat Linda door een van hen wordt mishandeld met stroomschokken. Joyce en Linda zijn door de jongens met de dood bedreigd zijn, althans dat is wat ik vernomen had.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(6f);
         dialogueText.text = "Bedankt Davey Kok";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -741,19 +759,22 @@ public class TweeSystem : MonoBehaviour
     }
     IEnumerator PlayerGetuigen11()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab11, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Linda te verhoren";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         dialogueText.text = "Linda het woord is aan u";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
         textWolk.text = "Ik was erbij toen Joyce werd bedreigd met een pistool door Abdoel, maar dit was niet op maandag 5 juli. Het was sowieso op een andere dag. Joyce is wel vaker bedreigd door de jongens. Ik heb het meerdere keren meegemaakt en een keer hadden de jongens zich opgesloten in Joyce’s kamer en toen gingen ze haar spullen kapot maken. Ze gooiden haar ruiten in en schreven het woord stinkdier op de muren. Uiteindelijk is ze maar verhuist. Julia en de jongens hebben altijd ruzie. Ze komt alleen naar ons huis als ze Mandy bezoekt. Ik denk wel dat Julia een oogje heeft op Abdoel, al snap ik niet waarom. Joyce is bij niemand echt geliefd. We hebben ook een keer met de meiden tegen de huisbaas gezegd dat ze soms liegt.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 0 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(10f);
         dialogueText.text = "Bedankt Linda";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -764,19 +785,22 @@ public class TweeSystem : MonoBehaviour
     }
     IEnumerator PlayerGetuigen10()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab10, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Mandy te verhoren";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         dialogueText.text = "Mandy het woord is aan u";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
         textWolk.text = "Ik ben doodsbang voor de jongens, vooral voor Ali toen hij een mes op mijn keel zette en me met de dood bedreigde. Ik ben niet in mijn eentje uit geweest toen ik nog met Ali had, dat mocht niet van hem. Toen ik dacht dat Ali iets te maken had met de moord op die oma in Golden Garden, wilde ik niks meer met hem te maken hebben maar ik durfde niets te doen. Ik weet dat ik niet goed lig met de jongens en dat ik een keer geruimd zal worden en iedereen weet dat. Samen met de meiden heb ik met de huisbaas over Joyce gesproken. Ze liegt namelijk vaak en praat niet de waarheid maar niemand durft daar iets aan te doen.";
         playerUnit.TakeDamage(4); // Hierbij zeg je dus 3 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(10f);
         dialogueText.text = "Bedankt Mandy";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -787,19 +811,22 @@ public class TweeSystem : MonoBehaviour
     }
     IEnumerator PlayerGetuigen9()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab9, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Mw Vermeulen te verhoren";
-        yield return new WaitForSeconds(10f);
-        dialogueText.text = "De tijd van deze ernstige mishandeling lag tussen 4:15 en 5:00. Het tijdstip van overleden ligt tussen acht uren en vier uren voorafgaande aan het tijdstip van mijn onderzoek om 12:15. Ik heb toen ook vastgesteld dat de dood een niet-natuurlijke oorzaak had.";
-        yield return new WaitForSeconds(10f);
-        textWolk.text = "Op 3 juli 1";
+        yield return new WaitForSeconds(2f);
+        dialogueText.text = "Mw Vermeulen het woord is aan u";
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
+        textWolk.text = "De tijd van deze ernstige mishandeling zou zijn gelegen tussen 4:15 en 5:00. Het tijdstip van overleden ligt tussen acht uren en vier uren voorafgaande aan het tijdstip van mijn onderzoek om 12:15. Ik heb toen ook vastgesteld dat de dood een niet-natuurlijke oorzaak had.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(6f);
         dialogueText.text = "Bedankt Mw Vermeulen";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -811,19 +838,22 @@ public class TweeSystem : MonoBehaviour
     }
     IEnumerator PlayerGetuigen8()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab8, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Mw Evers te verhoren";
-        yield return new WaitForSeconds(10f);
-        dialogueText.text = "Ik heb verschillende dingen onderzocht. Een van deze dingen waren de hoofdharen die zijn gevonden in de broek van oma Zhang en die niet van haarzelf waren. Mijn onderzoek laat zien dat de haren niet passend zijn bij de verdachten. Uit de bloedsporen heb ik wederom niks kunnen halen.Het was niet mogelijk om bruikbaar DNA uit deze sporen te verkrijgen. Als laatste heb ik gekeken naar de vlekken op de kleding van het slachtoffer. Alle sporen heb ik onderzocht maar wederom bleek er weer te weinig DNA aanwezig te zijn voor een analyse.";
-        yield return new WaitForSeconds(10f);
-        textWolk.text = "Op 3 juli 1993 waren mijn vrouw en ik in Tongeren in België omdat wij daar een nieuw restaurant hadden ";
+        yield return new WaitForSeconds(2f);
+        dialogueText.text = "Mw Evers het woord is aan u";
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
+        textWolk.text = "Ik heb verschillende dingen onderzocht. Een van deze dingen waren de hoofdharen die zijn gevonden in de broek van oma Zhang en die niet van haarzelf waren. Mijn onderzoek laat zien dat de haren niet passend zijn bij de verdachten.";
         playerUnit.TakeDamage(-2); // Hierbij zeg je dus -2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(6f);
         dialogueText.text = "Bedankt Mw Evers";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -835,19 +865,22 @@ public class TweeSystem : MonoBehaviour
     }
     IEnumerator PlayerGetuigen7()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab7, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Mr Voortman te verhoren";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         dialogueText.text = "Mr Voortman het woord is aan u";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
         textWolk.text = "De 56-jarige oma Zhang is hoogstwaarschijnlijk door verstikking of wurging om het leven gebracht, vermoedelijk nadat zij hevig was mishandeld. De bevindingen op het lichaam van oma Zhang wijzen op verstikking door krachtig geweld op de hals, dit past bij de kenmerken van wurging of een wurggreep. Daarnaast waren er ook sporen van mishandeling gevonden op haar hoofd, borstkas en bovenste deel van haar buik waardoor verschillende ribben gebroken raakten.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(8f);
         dialogueText.text = "Bedankt Mr Voortman";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -859,19 +892,22 @@ public class TweeSystem : MonoBehaviour
     }
     IEnumerator PlayerGetuigen1()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
         Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Abdoel te verhoren";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         dialogueText.text = "Abdoel het Woord is aan u.";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
         textWolk.text = "Op 3 juli 1993 waren mijn vrouw en ik in Tongeren in België omdat wij daar een nieuw restaurant hadden ";
         playerUnit.TakeDamage(-2); // Hierbij zeg je dus -2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(4f);
         dialogueText.text = "Bedankt Abdoel";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -882,19 +918,22 @@ public class TweeSystem : MonoBehaviour
     }
     IEnumerator PlayerGetuigen3()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab3, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Ali te verhoren";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         dialogueText.text = "Ali het woord is aan u.";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
         textWolk.text = "Ik heb het niet gedaan, ik was sowieso die hele avond gewoon op de Oudeweg. ";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(4f);
         dialogueText.text = "Bedankt Ali";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -905,19 +944,22 @@ public class TweeSystem : MonoBehaviour
     }
     IEnumerator PlayerGetuigen2()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
-        UI.GetuigenOn(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
+        Instantiate(GPrefab2, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Aldo te verhoren";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
         dialogueText.text = "Aldo het woord is aan u";
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(2f);
+        UI.GetuigenOn();
         textWolk.text = "Ik ben onschuldig, ik was uit met Jennifer en haar vriendin.";
         playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
+        yield return new WaitForSeconds(4f);
         dialogueText.text = "Bedankt Aldo";
-        yield return new WaitForSeconds(3f);
+        UI.GetuigenOff();
+        yield return new WaitForSeconds(2f);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
