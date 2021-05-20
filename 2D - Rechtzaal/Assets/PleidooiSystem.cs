@@ -303,15 +303,15 @@ public class PleidooiSystem : MonoBehaviour
             UI.GetuigenOn();
             // Getuigen 1 --------------------------------------------------------------------
             yield return new WaitForSeconds(1f);
-            GameObject GE1 = Instantiate(GPrefab12, GetuigenBattleStation); // Klopt nog niet
-            dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren"; //hier moet de naam nog bij
+            GameObject GE1 = Instantiate(GPrefab10, GetuigenBattleStation); // Klopt nog niet
+            dialogueText.text = playerUnit.unitName + " kiest om Mr Voortman te verhoren"; //hier moet de naam nog bij
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Mr Zhang het woord is aan u"; // idem
+            dialogueText.text = "Mr Voortman het woord is aan u"; // idem
             yield return new WaitForSeconds(1f);
-            textWolk.text = ""; // hier komt zijn verhaal
+            textWolk.text = "De 56-jarige oma Zhang is hoogstwaarschijnlijk door verstikking of wurging om het leven gebracht, vermoedelijk nadat zij hevig was mishandeld. De bevindingen op het lichaam van oma Zhang wijzen op verstikking door krachtig geweld op de hals, dit past bij de kenmerken van wurging of een wurggreep. Daarnaast waren er ook sporen van mishandeling gevonden op haar hoofd, borstkas en bovenste deel van haar buik waardoor verschillende ribben gebroken raakten."; // hier komt zijn verhaal
             playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
             battleScore.SetScore(playerUnit.score); // update de slider
-            dialogueText.text = "Bedankt Mr Zhang"; // update
+            dialogueText.text = "Bedankt Mr Voortman"; // update
             Destroy(GE1); 
 
             yield return new WaitForSeconds(3f);
@@ -320,30 +320,30 @@ public class PleidooiSystem : MonoBehaviour
             // Getuigen 2 --------------------------------------------------------------------
             dialogueText.text = "De advocaat van de verdachte mag nu een tweede getuigen oproepen";
             yield return new WaitForSeconds(1f);
-            GameObject GE2 = Instantiate(GPrefab13, GetuigenBattleStation); // Klopt nog niet
-            dialogueText.text = playerUnit.unitName + " kiest om dingdong te verhoren"; //hier moet de naam nog bij
+            GameObject GE2 = Instantiate(GPrefab16, GetuigenBattleStation); // Klopt nog niet
+            dialogueText.text = playerUnit.unitName + " kiest om Jennifer te verhoren"; //hier moet de naam nog bij
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Mr dingdong het woord is aan u"; // idem
+            dialogueText.text = "Mr Jennifer het woord is aan u"; // idem
             yield return new WaitForSeconds(1f);
-            textWolk.text = ""; // hier komt zijn verhaal
+            textWolk.text = "Ik ben samen met mijn vriend Aldo, uit geweest in Sittard, samen met een vriendin van mij. Mijn vriendin en ik gingen samen naar de discotheek De Roemer en ontmoette daar Aldo. Samen klikte we meteen en kregen we iets. We waren sowieso vanaf 23h in de kroeg tot een uur of 3:00 toen alles ging sluiten. Toen ik thuis kwam heb ik meteen deze fantastische avond opgeschreven in mijn dagboek, je kan het zelf checken hoor! Ik heb de volgende dag de datum aangepast, omdat ik te dronken was en het verkeerd had opgeschreven."; // hier komt zijn verhaal
             playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
             battleScore.SetScore(playerUnit.score); // update de slider
-            dialogueText.text = "Bedankt Mr dingdong"; // update
+            dialogueText.text = "Bedankt Mr Jennifer"; // update
             Destroy(GE2);
             yield return new WaitForSeconds(3f);
 
             // Getuigen 3--------------------------------------------------------------------
             dialogueText.text = "De advocaat van de verdachte mag nu de derde getuigen oproepen";
             yield return new WaitForSeconds(1f);
-            GameObject GE3 = Instantiate(GPrefab14, GetuigenBattleStation); // Klopt nog niet
-            dialogueText.text = playerUnit.unitName + " kiest om appelsap te verhoren"; //hier moet de naam nog bij
+            GameObject GE3 = Instantiate(GPrefab8, GetuigenBattleStation); // Klopt nog niet
+            dialogueText.text = playerUnit.unitName + " kiest om Wei Deng te verhoren"; //hier moet de naam nog bij
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Mr appelsap het woord is aan u"; // idem
+            dialogueText.text = "Mr Wei Deng het woord is aan u"; // idem
             yield return new WaitForSeconds(1f);
-            textWolk.text = ""; // hier komt zijn verhaal
+            textWolk.text = "Ik werkte bij Golden Garden net een week. Op zaterdag 3 juli 1993 werkte ik in het restaurant in Tongeren. Na sluiting zaten we nog te eten tot 0:30. Ik heb toen aan eigenaar Zhang gevraagd of hij nog naar Sittard gaat, want er is niet meer genoeg babi pangang-vlees en babi pangang-saus. Omdat hij dat niet van plan was, dacht ik dat ik dan zelf wel kon gaan de volgende ochtend. Ik zou op zondagochtend om 9:00 bij Golden Garden zijn om het op te halen. Ik vertrok even later met een collega richting Nederland en zette hem af in Maastricht.Ik kwam thuis, in Weert, rond 1:50 waarna ik in slaap ben gevallen.De volgende ochtend, zondags, had ik mij verslapen en stapte ik snel in de auto. Voor de grens ging ik even tanken, maar het was heel erg druk en ik moest wel 20 - 25 min wachten. Ik kon pas om 11:30 weer doorrijden en kwam rond het middaguur aan in Tongeren."; // hier komt zijn verhaal
             playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
             battleScore.SetScore(playerUnit.score); // update de slider
-            dialogueText.text = "Bedankt Mr appelsap"; // update
+            dialogueText.text = "Bedankt Mr Wei Deng"; // update
             Destroy(GE3);
             yield return new WaitForSeconds(3f);
 

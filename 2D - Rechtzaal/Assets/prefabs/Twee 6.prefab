@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3624094296181160426
+--- !u!1 &188724537578456112
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,36 +8,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5031788797169058888}
-  - component: {fileID: 602024260235002856}
+  - component: {fileID: 8296300749403241186}
+  - component: {fileID: 2075092255793533124}
   m_Layer: 0
-  m_Name: advocaat
+  m_Name: Joyce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5031788797169058888
+--- !u!4 &8296300749403241186
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3624094296181160426}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.85, z: 0}
-  m_LocalScale: {x: 0.05, y: 0.05, z: 1}
+  m_GameObject: {fileID: 188724537578456112}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.044, y: 0.764, z: 0}
+  m_LocalScale: {x: 0.05774342, y: 0.05774342, z: 0.36219674}
   m_Children: []
   m_Father: {fileID: 7327600671766224098}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &602024260235002856
+--- !u!212 &2075092255793533124
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3624094296181160426}
+  m_GameObject: {fileID: 188724537578456112}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -71,12 +71,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aea4ea0c3051d65438c070958f64376a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9efd136c51a475f48b54c7f351a7b593, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 29.786573, y: 42.100002}
+  m_Size: {x: 29.779999, y: 42.119778}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 7327600671766224098}
   - component: {fileID: 3510280492856527740}
   m_Layer: 0
-  m_Name: enemy lawyer
+  m_Name: Twee 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2.5045, y: 2.5045, z: 1}
   m_Children:
-  - {fileID: 5031788797169058888}
+  - {fileID: 8296300749403241186}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

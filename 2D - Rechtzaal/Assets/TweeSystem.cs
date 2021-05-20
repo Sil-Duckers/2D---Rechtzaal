@@ -23,6 +23,7 @@ public class TweeSystem : MonoBehaviour
     public GameObject GPrefab10;
     public GameObject GPrefab11;
     public GameObject GPrefab12;
+    public GameObject Scherm;
        
 
     public Transform playerBattleStation;
@@ -45,6 +46,7 @@ public class TweeSystem : MonoBehaviour
     public BattleSlider battleScore; // hiermee call ik het script Battlelsider in, noem het battlescore, kan evt vaker doen onder andere naam
     public GetuigenMenu UI;
     
+    
 
     public BattleState state;
 
@@ -57,10 +59,18 @@ public class TweeSystem : MonoBehaviour
     {
 
         state = BattleState.START; // verander gamestate naar begin
-        StartCoroutine(SetupBattle()); // functie Playerturn uitoefenen, Startcoroutine voor delay
+        
+         // functie Playerturn uitoefenen, Startcoroutine voor delay
         
     }
-      
+
+    public void KnopScherm()
+    {
+        Scherm.SetActive(false);
+        UI.DialogueOn();
+        StartCoroutine(SetupBattle());
+    }
+    
     IEnumerator SetupBattle() // IEnumerator is voor de delay, coroutine
     {
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
@@ -187,15 +197,15 @@ public class TweeSystem : MonoBehaviour
             UI.GetuigenOn();
             // Getuigen 1 --------------------------------------------------------------------
             yield return new WaitForSeconds(1f);
-            GameObject GE1 = Instantiate(GPrefab1, GetuigenBattleStation); // Klopt nog niet
-            dialogueText.text = playerUnit.unitName + " kiest om Mr Zhang te verhoren"; //hier moet de naam nog bij
+            GameObject GE1 = Instantiate(GPrefab2, GetuigenBattleStation); // Klopt nog niet
+            dialogueText.text = playerUnit.unitName + " kiest om Aldo te verhoren"; //hier moet de naam nog bij
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Mr Zhang het woord is aan u"; // idem
+            dialogueText.text = "Aldo het woord is aan u"; // idem
             yield return new WaitForSeconds(1f);
-            textWolk.text = ""; // hier komt zijn verhaal
+            textWolk.text = "Ik ben onschuldig, ik was uit met Jennifer en haar vriendin."; // hier komt zijn verhaal
             playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
             battleScore.SetScore(playerUnit.score); // update de slider
-            dialogueText.text = "Bedankt Mr Zhang"; // update
+            dialogueText.text = "Bedankt Aldo"; // update
             Destroy(GE1); 
 
             yield return new WaitForSeconds(3f);
@@ -204,30 +214,30 @@ public class TweeSystem : MonoBehaviour
             // Getuigen 2 --------------------------------------------------------------------
             dialogueText.text = "De advocaat van de verdachte mag nu een tweede getuigen oproepen";
             yield return new WaitForSeconds(1f);
-            GameObject GE2 = Instantiate(GPrefab1, GetuigenBattleStation); // Klopt nog niet
-            dialogueText.text = playerUnit.unitName + " kiest om dingdong te verhoren"; //hier moet de naam nog bij
+            GameObject GE2 = Instantiate(GPrefab11, GetuigenBattleStation); // Klopt nog niet
+            dialogueText.text = playerUnit.unitName + " kiest om Linda te verhoren"; //hier moet de naam nog bij
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Mr dingdong het woord is aan u"; // idem
+            dialogueText.text = "Linda het woord is aan u"; // idem
             yield return new WaitForSeconds(1f);
-            textWolk.text = ""; // hier komt zijn verhaal
+            textWolk.text = "Ik was erbij toen Joyce werd bedreigd met een pistool door Abdoel, maar dit was niet op maandag 5 juli. Het was sowieso op een andere dag. Joyce is wel vaker bedreigd door de jongens. Ik heb het meerdere keren meegemaakt en een keer hadden de jongens zich opgesloten in Joyce’s kamer en toen gingen ze haar spullen kapot maken. Ze gooiden haar ruiten in en schreven het woord stinkdier op de muren. Uiteindelijk is ze maar verhuist. Julia en de jongens hebben altijd ruzie. Ze komt alleen naar ons huis als ze Mandy bezoekt. Ik denk wel dat Julia een oogje heeft op Abdoel, al snap ik niet waarom. Joyce is bij niemand echt geliefd. We hebben ook een keer met de meiden tegen de huisbaas gezegd dat ze soms liegt."; // hier komt zijn verhaal
             playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
             battleScore.SetScore(playerUnit.score); // update de slider
-            dialogueText.text = "Bedankt Mr dingdong"; // update
+            dialogueText.text = "Bedankt Linda"; // update
             Destroy(GE2);
             yield return new WaitForSeconds(3f);
 
             // Getuigen 3--------------------------------------------------------------------
             dialogueText.text = "De advocaat van de verdachte mag nu de derde getuigen oproepen";
             yield return new WaitForSeconds(1f);
-            GameObject GE3 = Instantiate(GPrefab1, GetuigenBattleStation); // Klopt nog niet
-            dialogueText.text = playerUnit.unitName + " kiest om appelsap te verhoren"; //hier moet de naam nog bij
+            GameObject GE3 = Instantiate(GPrefab7, GetuigenBattleStation); // Klopt nog niet
+            dialogueText.text = playerUnit.unitName + " kiest om MW. Vermeulen te verhoren"; //hier moet de naam nog bij
             yield return new WaitForSeconds(1f);
-            dialogueText.text = "Mr appelsap het woord is aan u"; // idem
+            dialogueText.text = "MW. Vermeulen het woord is aan u"; // idem
             yield return new WaitForSeconds(1f);
-            textWolk.text = ""; // hier komt zijn verhaal
+            textWolk.text = "De tijd van deze ernstige mishandeling lag tussen 4:15 en 5:00. Het tijdstip van overleden ligt tussen acht uren en vier uren voorafgaande aan het tijdstip van mijn onderzoek om 12:15. Ik heb toen ook vastgesteld dat de dood een niet-natuurlijke oorzaak had."; // hier komt zijn verhaal
             playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
             battleScore.SetScore(playerUnit.score); // update de slider
-            dialogueText.text = "Bedankt Mr appelsap"; // update
+            dialogueText.text = "Bedankt MW. Vermeulen"; // update
             Destroy(GE3);
             yield return new WaitForSeconds(3f);
 

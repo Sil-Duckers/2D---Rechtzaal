@@ -10,6 +10,10 @@ public class DrieSystem : MonoBehaviour
 
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
+    public GameObject Scherm;
+    public GameObject Scherm2;
+    public GameObject SchermWon;
+    public GameObject SchermLost;
     
 
     public Transform playerBattleStation;
@@ -43,10 +47,26 @@ public class DrieSystem : MonoBehaviour
     {
 
         state = BattleState.START; // verander gamestate naar begin
-        StartCoroutine(SetupBattle()); // functie Playerturn uitoefenen, Startcoroutine voor delay
+         // functie Playerturn uitoefenen, Startcoroutine voor delay
+          }
+
+    public void KnopScherm()
+    {
+        Scherm.SetActive(false);
+        Scherm2.SetActive(false);
+        UI.DialogueOn();
+        UI.ButtonOn();
+        StartCoroutine(SetupBattle());
+    }
+
+    public void Knop2()
+    {
+        Scherm2.SetActive(true);
+        Scherm.SetActive(false);
+        
         
     }
-      
+
     IEnumerator SetupBattle() // IEnumerator is voor de delay, coroutine
     {
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
@@ -322,11 +342,17 @@ public class DrieSystem : MonoBehaviour
     IEnumerator EndDag1()
     {
         UI.GetuigenOff();
+        UI.DialogueOff();
         dialogueText.text = "Het is nu tijd voor het eindvonnis";
-        yield return new WaitForSeconds(1f);
-        dialogueText.text = "beetje tussenin. We hebben nog nietecht bepaald wat hier moet vgm";
         yield return new WaitForSeconds(5f);
-        dialogueText.text = "Dit was de derde en laatste zittingzitting";
+
+        if (playerUnit.score < 50)
+        {
+            SchermLost.SetActive(true);
+        }
+        else
+            SchermWon.SetActive(true);
+
         
         yield return new WaitForSeconds(5f);
     }
