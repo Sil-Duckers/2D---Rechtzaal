@@ -79,7 +79,7 @@ public class TweeSystem : MonoBehaviour
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<Unit>();
 
-        dialogueText.text = "Welkom bij de tweede zitting in de zaak: De zes van Breda" + "\r\n";
+        dialogueText.text = "Welkom bij de tweede zitting" + "\r\n";
         
 
         yield return new WaitForSeconds(4f); //coroutine, 5 seconde delay 
@@ -98,7 +98,7 @@ public class TweeSystem : MonoBehaviour
             UI.BS1On();
             UI.DialogueOff();
             UI.ButtonOff();
-            yield return new WaitForSeconds(14f);
+            yield return new WaitForSeconds(20f);
             UI.BS1Off();
             UI.DialogueOn();
             UI.ButtonOn();
@@ -122,7 +122,7 @@ public class TweeSystem : MonoBehaviour
             UI.BS2On();
             UI.DialogueOff();
             UI.ButtonOff();
-            yield return new WaitForSeconds(14f);
+            yield return new WaitForSeconds(60f);
             UI.BS2Off();
             UI.DialogueOn();
             UI.ButtonOn();
@@ -146,7 +146,7 @@ public class TweeSystem : MonoBehaviour
             UI.BS3On();
             UI.DialogueOff();
             UI.ButtonOff();
-            yield return new WaitForSeconds(14f);
+            yield return new WaitForSeconds(15f);
             UI.BS3Off();
             UI.DialogueOn();
             UI.ButtonOn();
@@ -169,7 +169,7 @@ public class TweeSystem : MonoBehaviour
             UI.BS4On();
             UI.DialogueOff();
             UI.ButtonOff();
-            yield return new WaitForSeconds(14f);
+            yield return new WaitForSeconds(20f);
             UI.BS4Off();
             UI.DialogueOn();
             UI.ButtonOn();
@@ -658,7 +658,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab6, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B1 = Instantiate(GPrefab6, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Joyce te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = " Joyce het woord is aan u";
@@ -671,6 +671,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Joyce";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B1);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -684,7 +685,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab4, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B2 = Instantiate(GPrefab4, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Clarissa te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = "Mw Huang het woord is aan u";
@@ -697,6 +698,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Clarissa";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B2);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -710,7 +712,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab5, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B3 = Instantiate(GPrefab5, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Julia te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = "Julia het woord is aan u";
@@ -723,6 +725,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Julia";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B3);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -736,7 +739,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab12, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B4 = Instantiate(GPrefab12, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Davey Kok te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = "Davey Kok het woord is aan u";
@@ -749,6 +752,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Davey Kok";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B4);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -762,7 +766,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab11, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B5 = Instantiate(GPrefab11, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Linda te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = "Linda het woord is aan u";
@@ -775,6 +779,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Linda";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B5);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -788,7 +793,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab10, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B6 = Instantiate(GPrefab10, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Mandy te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = "Mandy het woord is aan u";
@@ -801,6 +806,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mandy";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B6);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -814,7 +820,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab9, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B7 = Instantiate(GPrefab9, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Mw Vermeulen te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = "Mw Vermeulen het woord is aan u";
@@ -827,6 +833,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mw Vermeulen";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B7);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -841,7 +848,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab8, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B8 = Instantiate(GPrefab8, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Mw Evers te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = "Mw Evers het woord is aan u";
@@ -854,6 +861,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mw Evers";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B8);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -868,7 +876,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab7, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B9 =  Instantiate(GPrefab7, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Mr Voortman te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = "Mr Voortman het woord is aan u";
@@ -881,6 +889,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Mr Voortman";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B9);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -895,7 +904,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B10 = Instantiate(GPrefab1, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Abdoel te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = "Abdoel het Woord is aan u.";
@@ -908,6 +917,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Abdoel";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B10);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -921,7 +931,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab3, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B11 = Instantiate(GPrefab3, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Ali te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = "Ali het woord is aan u.";
@@ -934,6 +944,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Ali";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B11);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {
@@ -947,7 +958,7 @@ public class TweeSystem : MonoBehaviour
         yield return new WaitForSeconds(1f);
         UI.ListOff(); // Deze zet de lijst met getuigen uit
         UI.GetuigenOff(); // deze zet de getuigen UI (textwolk enzo aan)
-        Instantiate(GPrefab2, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
+        GameObject B12 = Instantiate(GPrefab2, GetuigenBattleStation); // dit laad het gameobject GPrefab1 erin. Die heb ik vervolgens weer toegekend aan het plaatje van mister zhang
         dialogueText.text = playerUnit.unitName + " kiest om Aldo te verhoren";
         yield return new WaitForSeconds(2f);
         dialogueText.text = "Aldo het woord is aan u";
@@ -960,6 +971,7 @@ public class TweeSystem : MonoBehaviour
         dialogueText.text = "Bedankt Aldo";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
+        Destroy(B12);
         UI.GetuigenOff(); // hiermee zet in de getuign ui weer uit, wss staat de getuigen er wel nog als ik m straks weer laad
         if (G3 != 0)
         {

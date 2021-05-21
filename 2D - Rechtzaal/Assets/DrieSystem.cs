@@ -69,13 +69,15 @@ public class DrieSystem : MonoBehaviour
 
     IEnumerator SetupBattle() // IEnumerator is voor de delay, coroutine
     {
+        UI.DialogueOn();
         GameObject playerGO = Instantiate(playerPrefab, playerBattleStation);
         playerUnit = playerGO.GetComponent<Unit>();
 
         GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation);
         enemyUnit = enemyGO.GetComponent<Unit>();
 
-        dialogueText.text = "Welkom bij de derde zitting in de zaak: De zes van Breda" + "\r\n";
+        dialogueText.text = "Welkom bij de derde zitting" + "\r\n";
+        
          // Dit is voor de void uit te oefenen
         
         yield return new WaitForSeconds(5f); //coroutine, 5 seconde delay 
@@ -251,7 +253,7 @@ public class DrieSystem : MonoBehaviour
     {
         if (PT == 3)
         {
-            dialogueText.text = enemyUnit.unitName + " verteld zijn slotpleidooi."; // Aangeven van aanval
+            dialogueText.text = enemyUnit.unitName + " vertelt zijn slotpleidooi."; // Aangeven van aanval
             yield return new WaitForSeconds(2f);
 
             dialogueText.text = enemyUnit.unitName + "Geachte Hof, mijn cliënten zijn onschuldig. Dit redeneren wij op basis van verklaringen en sporenonderzoek. " + "Mijn cliënten zijn onschuldig";
