@@ -223,7 +223,7 @@ public class TweeSystem : MonoBehaviour
             textWolk.text = "Ik was erbij toen Joyce werd bedreigd met een pistool door Abdoel, maar dit was niet op maandag 5 juli. Het was sowieso op een andere dag. Joyce is wel vaker bedreigd door de jongens. Ik heb het meerdere keren meegemaakt en een keer hadden de jongens zich opgesloten in Joyce’s kamer en toen gingen ze haar spullen kapot maken. Ze gooiden haar ruiten in en schreven het woord stinkdier op de muren. Uiteindelijk is ze maar verhuist. Julia en de jongens hebben altijd ruzie. Ze komt alleen naar ons huis als ze Mandy bezoekt. Ik denk wel dat Julia een oogje heeft op Abdoel, al snap ik niet waarom. Joyce is bij niemand echt geliefd. We hebben ook een keer met de meiden tegen de huisbaas gezegd dat ze soms liegt."; // hier komt zijn verhaal
             playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
             battleScore.SetScore(playerUnit.score); // update de slider
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(20f);
             dialogueText.text = "Bedankt Linda"; // update
             Destroy(GE2);
             UI.GetuigenOff();
@@ -241,7 +241,7 @@ public class TweeSystem : MonoBehaviour
             textWolk.text = "De tijd van deze ernstige mishandeling lag tussen 4:15 en 5:00. Het tijdstip van overleden ligt tussen acht uren en vier uren voorafgaande aan het tijdstip van mijn onderzoek om 12:15. Ik heb toen ook vastgesteld dat de dood een niet-natuurlijke oorzaak had."; // hier komt zijn verhaal
             playerUnit.TakeDamage(-5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
             battleScore.SetScore(playerUnit.score); // update de slider
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(12f);
             dialogueText.text = "Bedankt MW. Vermeulen"; // update
             Destroy(GE3);
             UI.GetuigenOff();
@@ -667,7 +667,7 @@ public class TweeSystem : MonoBehaviour
         textWolk.text = " Ik ben op maandagavond 5 juli 1993 bedreigd door Ali, Aldo en Abdoel. Ze hebben mij heel erg duidelijk gemaakt dat ik mijn mond moest houden over wat ik had gezien bij Golden Garden. Abdoel trok een wapen, ik schrok me dood. Er zijn al sinds het begin problemen tussen de jongens en mij. Ze drongen mijn kamer binnen en namen spullen of geld mee. Elke keer heb ik aangifte hiervan gedaan bij de politie. Nadat de jongens een keer mijn hele kamer kort en klein hadden geslagen, ben ik verhuisd. Ik denk dat Julie de jongens heeft geholpen om mij uit mijn kamer te zetten. Toen ik verhuisde naar een andere woning op de Oudeweg, toen vonden de jongens mij weer. Clarissa had namelijk het adres doorgegeven.";
         playerUnit.TakeDamage(10); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(20f);
         dialogueText.text = "Bedankt Joyce";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -694,7 +694,7 @@ public class TweeSystem : MonoBehaviour
         textWolk.text = " De jongens die vaak langskomen bij ons op de Oudeweg hebben de boel helemaal verziekt. Ze hebben zelf op Linda en Mandy geschoten en de spullen van Joyce kapot gemaakt! Ik heb nooit echt een gelijkwaardige vriendschap met Joyce gehad. Ik durfde niets te zeggen tegen Joyce, laat staan haar tegen praten. Ze is nogal moeilijk te ontwijken. Joyce praat wel vaker niet de waarheid en dat hebben we ook tegen de huisbaas gezegd om te laten weten wat er aan de hand is.";
         playerUnit.TakeDamage(10); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(16f);
         dialogueText.text = "Bedankt Clarissa";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -721,7 +721,7 @@ public class TweeSystem : MonoBehaviour
         textWolk.text = "Wat er allemaal op de Oudeweg is gebeurd is voor mij echt het meest schokkende wat ik ooit heb meegemaakt. Ik denk dat de andere meiden echt door het huis zijn gecommandeerd door Aldo, Ali. Abdoel deed niks, hij gedraagt zich gewoon.";
         playerUnit.TakeDamage(7); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(12f);
         dialogueText.text = "Bedankt Julia";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -748,7 +748,7 @@ public class TweeSystem : MonoBehaviour
         textWolk.text = "Soms als de jongens langs kwamen op de Oudeweg, dan terroriseerde de 3 jongens de meisjes. Ik heb ook het idee dat Linda door een van hen wordt mishandeld met stroomschokken. Joyce en Linda zijn door de jongens met de dood bedreigd zijn, althans dat is wat ik vernomen had.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(12f);
         dialogueText.text = "Bedankt Davey Kok";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -775,7 +775,7 @@ public class TweeSystem : MonoBehaviour
         textWolk.text = "Ik was erbij toen Joyce werd bedreigd met een pistool door Abdoel, maar dit was niet op maandag 5 juli. Het was sowieso op een andere dag. Joyce is wel vaker bedreigd door de jongens. Ik heb het meerdere keren meegemaakt en een keer hadden de jongens zich opgesloten in Joyce’s kamer en toen gingen ze haar spullen kapot maken. Ze gooiden haar ruiten in en schreven het woord stinkdier op de muren. Uiteindelijk is ze maar verhuist. Julia en de jongens hebben altijd ruzie. Ze komt alleen naar ons huis als ze Mandy bezoekt. Ik denk wel dat Julia een oogje heeft op Abdoel, al snap ik niet waarom. Joyce is bij niemand echt geliefd. We hebben ook een keer met de meiden tegen de huisbaas gezegd dat ze soms liegt.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 0 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(20f);
         dialogueText.text = "Bedankt Linda";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -802,7 +802,7 @@ public class TweeSystem : MonoBehaviour
         textWolk.text = "Ik ben doodsbang voor de jongens, vooral voor Ali toen hij een mes op mijn keel zette en me met de dood bedreigde. Ik ben niet in mijn eentje uit geweest toen ik nog met Ali had, dat mocht niet van hem. Toen ik dacht dat Ali iets te maken had met de moord op die oma in Golden Garden, wilde ik niks meer met hem te maken hebben maar ik durfde niets te doen. Ik weet dat ik niet goed lig met de jongens en dat ik een keer geruimd zal worden en iedereen weet dat. Samen met de meiden heb ik met de huisbaas over Joyce gesproken. Ze liegt namelijk vaak en praat niet de waarheid maar niemand durft daar iets aan te doen.";
         playerUnit.TakeDamage(4); // Hierbij zeg je dus 3 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(20f);
         dialogueText.text = "Bedankt Mandy";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -829,7 +829,7 @@ public class TweeSystem : MonoBehaviour
         textWolk.text = "De tijd van deze ernstige mishandeling zou zijn gelegen tussen 4:15 en 5:00. Het tijdstip van overleden ligt tussen acht uren en vier uren voorafgaande aan het tijdstip van mijn onderzoek om 12:15. Ik heb toen ook vastgesteld dat de dood een niet-natuurlijke oorzaak had.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(12f);
         dialogueText.text = "Bedankt Mw Vermeulen";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -857,7 +857,7 @@ public class TweeSystem : MonoBehaviour
         textWolk.text = "Ik heb verschillende dingen onderzocht. Een van deze dingen waren de hoofdharen die zijn gevonden in de broek van oma Zhang en die niet van haarzelf waren. Mijn onderzoek laat zien dat de haren niet passend zijn bij de verdachten.";
         playerUnit.TakeDamage(-2); // Hierbij zeg je dus -2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(12f);
         dialogueText.text = "Bedankt Mw Evers";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -885,7 +885,7 @@ public class TweeSystem : MonoBehaviour
         textWolk.text = "De 56-jarige oma Zhang is hoogstwaarschijnlijk door verstikking of wurging om het leven gebracht, vermoedelijk nadat zij hevig was mishandeld. De bevindingen op het lichaam van oma Zhang wijzen op verstikking door krachtig geweld op de hals, dit past bij de kenmerken van wurging of een wurggreep. Daarnaast waren er ook sporen van mishandeling gevonden op haar hoofd, borstkas en bovenste deel van haar buik waardoor verschillende ribben gebroken raakten.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(16f);
         dialogueText.text = "Bedankt Mr Voortman";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -913,7 +913,7 @@ public class TweeSystem : MonoBehaviour
         textWolk.text = "Op 3 juli 1993 waren mijn vrouw en ik in Tongeren in België omdat wij daar een nieuw restaurant hadden ";
         playerUnit.TakeDamage(-2); // Hierbij zeg je dus -2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(6f);
         dialogueText.text = "Bedankt Abdoel";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);

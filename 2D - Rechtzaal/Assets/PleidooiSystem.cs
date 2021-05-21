@@ -997,7 +997,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Rond 11:00 kwam ik samen met Fai She en Park Tao binnen via het afhaalgedeelte van het restaurant, dat tevens al van het slot was. Meestal is Kelvin of oma Zhang binnen als wij aankomen. Maar toen zagen wij iets ongebruikelijks: het licht in de keuken brandt, de gokkast ligt opengebroken en het geldbakje van de kast ligt op de grond. In de keuken vonden wij het dode lichaam van oma Zhang waarna ik schreeuwde en weg liep.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(15f);
         dialogueText.text = "Bedankt Chong Kong";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1024,7 +1024,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Samen met Chong Kong Long en Park Tao kwam ik binnen even voor 11:00 in het restaurant. De deur van het afhaalgedeelte was al van het slot, wat niet vreemd is want soms is ober Kelvin of oma Zhang al binnen. Wij troffen daar wel het licht dat aan was in de keuken, de gokkast die opengebroken lag en het geldbakje van de kast die op de grond lag. In de keuken vonden we het dode lichaam van oma Zhang, waarna Long schreeuwde en weg liep. Ik ging toen gewapend met een meubelstuk de keuken in, zodat ik mij kon verweren tegen eventuele inbrekers. Nadat ik niemand tegenkwam ben ik naar het huis van oma Zhang gerend om mijn man te halen.";
         playerUnit.TakeDamage(5); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(20f);
         dialogueText.text = "Bedankt Fai She";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1051,7 +1051,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Oma Zhang heeft voor mij de deur opengemaakt waarna ik direct naar mijn zolderkamer ging die ik deel met Liao. Na een half uur kwam ook Liao thuis. Ik heb zelf televisie gekeken en een douche genomen waarna ik rond middernacht ben gaan slapen. Ik heb ‘s nachts niks bijzonders gehoord of gezien.";
         playerUnit.TakeDamage(0); // Hierbij zeg je dus 0 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
         dialogueText.text = "Bedankt Guang Yin";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1078,7 +1078,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Ik kwam samen met Fai She en Chong Kong Long rond 11:00 binnen in het restaurant via het afhaalgedeelte. De deur was al van het slot wat normaal was, maar het licht in de keuken brandde, de gokkast was opengebroken en het geldbakje van de kast lag op de grond, wat erg vreemd was. Toen wij de keuken in liepen zagen wij het dode lichaam van oma Zhang waardoor Long ging schreeuwen en wegliep en Fai She pakte een meubelstuk om inbrekers te kunnen verweren. Ik ging toen snel naar de snackbar naast het restaurant toe, Sjakies Smikkel, en de eigenaar Casper Bosman belde toen de politie rond 10:55. Tijdens het wachten belde ik met de België verblijvende zoon van oma Zhang en iets na elven was de politie ter plaatse.";
         playerUnit.TakeDamage(3); // Hierbij zeg je dus 3 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(20f);
         dialogueText.text = "Bedankt Park Tao";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1105,7 +1105,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Ik heb rond 23:00 de overdracht van de dagopbrengst gezien van ober Fong Cheng (bijnaam Kelvin) aan oma Zhang. Toen ik thuiskwam was Yin al televisie aan het kijken en zelf ging ik rond 2:00 slapen. Ik heb niemand uit de woning horen gaan en ook geen telefoon gehoord.";
         playerUnit.TakeDamage(0); // Hierbij zeg je dus 0 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
         dialogueText.text = "Bedankt Ting Liao";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1132,7 +1132,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Ik werkte bij Golden Garden net een week. Op zaterdag 3 juli 1993 werkte ik in het restaurant in Tongeren. Na sluiting zaten we nog te eten tot 0:30. Ik heb toen aan eigenaar Zhang gevraagd of hij nog naar Sittard gaat, want er is niet meer genoeg babi pangang-vlees en babi pangang-saus. Omdat hij dat niet van plan was, dacht ik dat ik dan zelf wel kon gaan de volgende ochtend. Ik zou op zondagochtend om 9:00 bij Golden Garden zijn om het op te halen. Ik vertrok even later met een collega richting Nederland en zette hem af in Maastricht.Ik kwam thuis, in Weert, rond 1:50 waarna ik in slaap ben gevallen.De volgende ochtend, zondags, had ik mij verslapen en stapte ik snel in de auto. Voor de grens ging ik even tanken, maar het was heel erg druk en ik moest wel 20 - 25 min wachten. Ik kon pas om 11:30 weer doorrijden en kwam rond het middaguur aan in Tongeren.";
         playerUnit.TakeDamage(-5); // Hierbij zeg je dus -5 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(25f);
         dialogueText.text = "Bedankt Wei Deng";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1159,7 +1159,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Ik ben op 3 juli samen met Liao om ongeveer 23:00 uit het restaurant vertrokken. Toen kwamen wij oma Zhang halverwege op straat tegen en hebben toen ter plekke het geld gegeven. Daarna zijn Liao en oma Zhang vertrokken naar het huis van de zoon van oma Zhang.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
         dialogueText.text = "Bedankt Kelvin";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1186,7 +1186,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "De 56-jarige oma Zhang is hoogstwaarschijnlijk door verstikking of wurging om het leven gebracht, vermoedelijk nadat zij hevig was mishandeld. De bevindingen op het lichaam van oma Zhang wijzen op verstikking door krachtig geweld op de hals, dit past bij de kenmerken van wurging of een wurggreep. Daarnaast waren er ook sporen van mishandeling gevonden op haar hoofd, borstkas en bovenste deel van haar buik waardoor verschillende ribben gebroken raakten.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(15f);
         dialogueText.text = "Bedankt Mr Voortman";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1213,7 +1213,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Ik heb verschillende dingen onderzocht. Een van deze dingen waren de hoofdharen die zijn gevonden in de broek van oma Zhang en die niet van haarzelf waren. Mijn onderzoek laat zien dat de haren niet passend zijn bij de verdachten.";
         playerUnit.TakeDamage(-2); // Hierbij zeg je dus -2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(10f);
         dialogueText.text = "Bedankt Mw Evers";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1240,7 +1240,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "De tijd van deze ernstige mishandeling lag tussen 4:15 en 5:00. Het tijdstip van overleden ligt tussen acht uren en vier uren voorafgaande aan het tijdstip van mijn onderzoek om 12:15. Ik heb toen ook vastgesteld dat de dood een niet-natuurlijke oorzaak had.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(6f);
+        yield return new WaitForSeconds(8f);
         dialogueText.text = "Bedankt Mw Vermeulen";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1265,11 +1265,11 @@ public class PleidooiSystem : MonoBehaviour
         yield return new WaitForSeconds(2f);
         UI.GetuigenOn();
         textWolk.text = "Mijn collega’s en ik zijn er van overtuigd dat er voor de avond van 3 op 4 juli 1993 twee scenario's zich hebben kunnen afspelen. Ik zal kort beide scenario’s beschrijven voor de rechtbank. Scenario 1 beschouwd Joyce, Julia en Clarissa als toeschouwers en Aldo, Abdoel en Ali als daders. Joyce en Clarissa zijn samen uit geweest in Sittard en arriveren rond 3:00 bij het huis van Alexander waarna ze zijn gaan slapen. Om 4:00 wordt Clarissa gewekt door Joyce om naar een straat in de buurt van het restaurant te gaan.Clarissa zegt dat ze daar tussen 4:00 en 4:30 daar aankwamen, Joyce beweert dat ze tussen 4:30 en 5:15 aankwamen.Eenmaal aangekomen daar treffen ze de Abdoel, Aldo en Ali.Volgens Clarissa en Joyce gingen de jongens naar binnen en kwamen ze even later weer naar buiten.Na het vertrek van de jongens lopen de meiden naar binnen om te controleren of oma Zhang nog leefde, Clarissa beweert dat ze oma Zhang niet in leven heeft gezien. ";
-        yield return new WaitForSeconds(15f);
+        yield return new WaitForSeconds(25f);
         textWolk.text = "Scenario 2 beschouwd zowel Joyce, Julia en Clarissa als Aldo, Abdoel en Ali als daders.De tijden zijn hetzelfde alleen zeg Julia dat zij samen met de jongens arriveert rond 2:00.Julia zegt dat de jongens de meisjes hebben opgedragen om de eigenaar van Golden Garden op te halen.Joyce, Julia en Clarissa hebben oma opgehaald en meegenomen. Iedereen behalve Julia gaat het restaurant binnen, dat komt in elke verklaring naar voren. Joyce en Clarissa zien dat oma mishandeld wordt door de jongens en ze proberen hun te stoppen waarna een van de jongens oma’s keel hebben dicht gegrepen en daarna dichtgeknepen. Wie de dader is, is niet duidelijk";
         playerUnit.TakeDamage(10); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(20f);
         dialogueText.text = "Bedankt Mw Kuipers";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1296,7 +1296,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Oudeweg 92 is een soort halfweghuis. De meeste bewoners wonen daar omdat zij eerder verbleven in het gezinsvervangend tehuis Huize Terlet in Roermond. In 1993 werd de Oudeweg 92 bijna dagelijks bezocht door een groep jongens, onder wie Aldo, Abdoel en Ali, die zichzelf ‘de zeven van Sittard’ zouden noemen. Aldo ontkent deze naam. Volgens de meisjes zijn de jongens al in juni 1993 frequente bezoekers van Oudeweg 92, maar volgens de jongens pas vanaf juli / augustus 1993.De bezoeken zouden gepaard zijn gegaan met bedreiging en intimidatie.De verklaringen hierover zijn zowel afkomstig van de vermeende slachtoffers als van getuigen.";
         playerUnit.TakeDamage(5); // Hierbij zeg je dus 5 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(12f);
         dialogueText.text = "Bedankt Mr Van der Laan";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1323,7 +1323,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Na een drukke dag kwamen mijn man en ik tussen 23.30 en 24.00 thuis op zondag 4 juli 1993. Van de overburen kregen we te horen wat er met Oma Zhang was gebeurd. Ik realiseerde mij een week later dat wat ik toen gehoord had mogelijk verband houdt met de moord op oma Zhang. Ik was die nacht tussen 3.15 en 3.30 in de keuken waar ik het licht uitdeed en toen naar de gang liep. Ik herkende de schim van Oma Zhang aan de manier van lopen en aan haar slofjes. Toen ik de woonkamer in liep hoorde ik een gil waarna er in het Chinees gegild en gekrijst werd. De gil kon van oma komen maar dat weet ik niet zeker. Op een gegeven moment hoorde ik niks meer en ging ik weer slapen.";
         playerUnit.TakeDamage(10); // Hierbij zeg je dus 10 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(15f);
         dialogueText.text = "Bedankt Mw Boonstra";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1350,7 +1350,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Ik ben samen met mijn vriend Aldo, uit geweest in Sittard, samen met een vriendin van mij. Mijn vriendin en ik gingen samen naar de discotheek De Roemer en ontmoette daar Aldo. Samen klikte we meteen en kregen we iets. We waren sowieso vanaf 23h in de kroeg tot een uur of 3:00 toen alles ging sluiten. Toen ik thuis kwam heb ik meteen deze fantastische avond opgeschreven in mijn dagboek, je kan het zelf checken hoor! Ik heb de volgende dag de datum aangepast, omdat ik te dronken was en het verkeerd had opgeschreven.";
         playerUnit.TakeDamage(-5); // Hierbij zeg je dus -5 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(15f);
         dialogueText.text = "Bedankt Jennifer";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1377,7 +1377,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Ivar, Floris, Abdoel en ik zijn uitgegaan in Sittard. Ik weet niet meer precies hoe laat wij naar huis gingen maar het was zeker sluitingstijd aangezien de lampen in de clubs alweer aan gingen. Daarna zijn wij naar Ivar’s en mijn oma gegaan want die was jarig, Ivar is trouwens ook mijn neef. We namen de taxi naar haar huis en toen wij aankwamen was het feest zeker nog in volle gang. Toen we aangeschoven waren zijn we tot vroeg in de ochtend door gegaan. Ik heb niet afscheid genomen van de jongens maar ben gaan slapen toen het licht werd, ik weet niet hoe lang zij nog door zijn gegaan of of ze al eerder weg waren.  ";
         playerUnit.TakeDamage(-5); // Hierbij zeg je dus -5 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(15f);
         dialogueText.text = "Bedankt Annabel";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
@@ -1404,7 +1404,7 @@ public class PleidooiSystem : MonoBehaviour
         textWolk.text = "Ik arriveerde ongeveer 5 min voordat de koks kwamen. Ik ging niet door de niet afgesloten deur naar binnen maar ik zag wel dat het licht in de keuken aan is. Ik besloot om meteen aan het werk te gaan en deed het deur naar het restaurantgedeelte van het slot, zette een decoratieboom buiten en ging mij opmaken in het toilet. Toen hoorde ik de koks binnenkomen en tegen elkaar zeggen dat de gokkast was opengebroken. Ik hoorde toen een van de koks heel hard gillen en besloot mij te verstoppen in de wc. Toen ik hoorde dat oma Zhang ‘neer ligt’ rende ik in paniek naar buiten en ging naar het huis van de eigenaar Zhang om op de kinderen te passen.";
         playerUnit.TakeDamage(2); // Hierbij zeg je dus 2 damage. Dit is makkelijker dan dat gezeik via de prefab.
         battleScore.SetScore(playerUnit.score);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(15f);
         dialogueText.text = "Bedankt Chi Li";
         UI.GetuigenOff();
         yield return new WaitForSeconds(2f);
