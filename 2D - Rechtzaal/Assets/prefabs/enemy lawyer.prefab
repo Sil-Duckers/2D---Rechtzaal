@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: 'Mr Advocaat '
-  unitLevel: 100
+  unitLevel: -100
   GetuigenCount: 0
   score: 3
   maxScore: 10
